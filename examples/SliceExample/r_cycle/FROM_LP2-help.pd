@@ -1,0 +1,205 @@
+#N canvas 109 60 1171 718 10;
+#X declare -path r_cycle;
+#X obj 29 328 cnv 15 500 350 empty empty Msg_to_LP_Pro 5 10 0 12 -261234
+-66577 0;
+#X obj 29 47 cnv 15 200 270 empty empty Msg_from_LP_Pro 5 10 0 12 -261682
+-66577 0;
+#X floatatom 56 138 5 0 0 0 row - -;
+#X floatatom 71 158 5 0 0 0 column - -;
+#X symbolatom 86 179 15 0 0 0 button - -;
+#X floatatom 102 198 5 0 0 0 note - -;
+#X floatatom 117 218 5 0 0 0 velocity - -;
+#X floatatom 132 238 5 0 0 0 polytouch - -;
+#X floatatom 148 258 5 0 0 0 aftertouch - -;
+#X floatatom 163 278 5 0 0 0 cc_value - -;
+#X floatatom 179 298 5 0 0 0 cc_number - -;
+#X floatatom 47 396 5 0 0 1 pad_button - -;
+#X floatatom 81 416 5 0 0 1 color - -;
+#X msg 116 517 clear;
+#X floatatom 180 389 5 0 0 0 - - -;
+#X msg 180 410 column \$1;
+#X floatatom 180 479 5 0 0 0 - - -;
+#X msg 180 500 setall \$1;
+#X floatatom 180 434 5 0 0 0 - - -;
+#X msg 180 455 row \$1;
+#X floatatom 265 388 5 0 0 1 mode_(0-1-2) - -;
+#X msg 265 475 mode \$1;
+#X msg 275 413 symbol static;
+#X msg 285 433 symbol flash;
+#X msg 295 453 symbol pulse;
+#X obj 562 165 cnv 15 180 60 empty empty Draw_and_Animate 5 10 0 12
+-204800 -66577 0;
+#X text 679 194 double \; click \;;
+#X text 234 45 OUTLETS (left-to-right) \; \; 1 (flaot) row nr (0-7)
+- pads only \; 2 (float) column nr (0-7) - pads only \; 3 (symbol)
+button name \; 4 (float) note on/off nr (pads) \; 5 (float) velocity
+(pads) \; 6 (float) polytouch (pads) \; 7 (float) aftertouch (pads)
+\; 8 (float) cc value (buttons) \; 9 (float) cc nr (buttons) \;;
+#N canvas 0 23 702 483 ANIMATRIX 0;
+#X obj 329 67 cnv 15 250 325 empty empty ANIMATION 5 10 0 12 -204786
+-66577 0;
+#X obj 415 94 tgl 15 0 empty empty on_off 0 -8 0 10 -262144 -1 -1 0
+1;
+#X floatatom 466 92 5 0 0 1 refresh_rate - -;
+#X obj 415 207 pack 0 2;
+#X floatatom 460 181 5 0 0 1 square_size - -;
+#X floatatom 415 181 5 0 0 0 start.point - -;
+#X obj 484 272 random 127;
+#X obj 484 293 + 1;
+#X obj 415 156 t f b b;
+#X obj 415 114 metro 150;
+#X obj 289 15 loadbang;
+#X msg 289 36 150;
+#X msg 484 346 clear;
+#X obj 27 67 cnv 15 270 250 empty empty DRAWING 5 10 0 12 -262130 -66577
+0;
+#X floatatom 177 170 5 0 0 1 color(1-127) - -;
+#X obj 108 140 pack 0 2;
+#X floatatom 153 114 5 0 0 1 square_size - -;
+#X floatatom 108 114 5 0 0 0 start.point - -;
+#X msg 177 232 clear;
+#N canvas 0 23 450 300 COUNTER 0;
+#X obj 128 40 inlet;
+#X obj 128 61 f;
+#X obj 128 112 t f f;
+#X obj 128 82 % 89;
+#X obj 168 112 + 1;
+#X obj 128 133 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 5 0;
+#X connect 2 1 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 1;
+#X restore 415 136 pd COUNTER;
+#X obj 415 367 TO_LPP, f 12;
+#X obj 108 262 TO_LPP, f 12;
+#X obj 484 250 sel 0;
+#X obj 484 229 random 5;
+#X obj 108 194 SQUARE;
+#X obj 415 316 SQUARE;
+#X connect 1 0 9 0;
+#X connect 2 0 9 1;
+#X connect 3 0 25 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 25 1;
+#X connect 8 0 5 0;
+#X connect 8 1 23 0;
+#X connect 8 2 12 0;
+#X connect 9 0 19 0;
+#X connect 10 0 11 0;
+#X connect 11 0 2 0;
+#X connect 12 0 20 0;
+#X connect 14 0 24 1;
+#X connect 15 0 24 0;
+#X connect 16 0 15 1;
+#X connect 17 0 15 0;
+#X connect 18 0 21 0;
+#X connect 19 0 8 0;
+#X connect 22 0 6 0;
+#X connect 23 0 22 0;
+#X connect 24 0 21 0;
+#X connect 25 0 20 0;
+#X restore 582 196 pd ANIMATRIX;
+#X obj 29 11 cnv 15 155 25 empty empty r_cycle-LP-MK2 5 12 0 16 -204786
+-1 0;
+#X floatatom 215 647 5 0 0 3 R - -;
+#X floatatom 269 647 5 0 0 3 G - -;
+#X floatatom 323 647 5 0 0 3 B - -;
+#X symbolatom 398 388 20 0 0 0 - - -;
+#X obj 405 408 tgl 15 0 empty empty loop 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 405 429 5 0 0 1 speed_(1-7) - -;
+#X obj 398 468 pack s 0 4;
+#X msg 398 489 text \$1 \$2 \$3;
+#X msg 396 521 text_stop;
+#X obj 398 369 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 243 276 DEVICE_SELECT;
+#X floatatom 165 238 5 0 0 1 note - -;
+#X obj 132 137 unpack;
+#X msg 38 81 print_args;
+#X obj 124 81 tgl 15 0 empty empty OFF/ON 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 62 584 r \$0_to_lp;
+#X obj 116 538 s \$0_to_lp;
+#X obj 396 562 s \$0_to_lp;
+#X text 550 330 INLETS (left-to-right) \; \; 1 (float) pad/button nr
+(1-98 - bottom-top / left-right) \; --(list) button+color (up till
+98 per msg) \; --(symbol) button name \; METHODS \; -- "mode" to set
+LEDs mode - uses float (0-2) or symbols ('static' \, 'flash' \, 'pulse')
+\; -- "column" to light up columns - uses float (0-7) \; -- "row" to
+light up rows - uses float (0-7) \; -- "setall" to light up all LEDs
+- float (0-127) \; -- "clear" to clear the surface \; -- "text" to
+display text on the surface - uses symbol for actual text \, float
+for loop off/on and float for speed (1-7) \; -- "text_stop" to stop
+displaying text on the surface \; -- "rgb" - elem_id+R+G+B (RGB in
+a range 0-63) - this can be repeated up till 81 times in the same list
+\; \; 2 (float) color from color table (0-127) \;;
+#X obj 215 537 COLORS;
+#X obj 56 106 FROM_LP2 1 72, f 21;
+#X obj 47 617 TO_LP2, f 12;
+#X text 243 244 select Launchpad MK2 port \; (in and out) \;;
+#X msg 249 342 rgb 34 0 35 35 35 45 6 7 78 63 0 12;
+#X msg 66 484 symbol arrow_left;
+#X msg 56 464 symbol record_arm;
+#X msg 37 366 list 35 110 12 115 64 120 95 15;
+#X obj 567 53 declare -path r_cycle;
+#X text 795 50 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 826 172 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 796 80 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 796 137 You may obtain a copy of the License at;
+#X text 796 202 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 796 258 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 11 0 51 0;
+#X connect 12 0 49 0;
+#X connect 12 0 51 1;
+#X connect 13 0 46 0;
+#X connect 14 0 15 0;
+#X connect 15 0 46 0;
+#X connect 16 0 17 0;
+#X connect 17 0 46 0;
+#X connect 18 0 19 0;
+#X connect 19 0 46 0;
+#X connect 20 0 21 0;
+#X connect 21 0 46 0;
+#X connect 22 0 21 0;
+#X connect 23 0 21 0;
+#X connect 24 0 21 0;
+#X connect 33 0 36 0;
+#X connect 34 0 36 1;
+#X connect 35 0 36 2;
+#X connect 36 0 37 0;
+#X connect 37 0 47 0;
+#X connect 38 0 47 0;
+#X connect 39 0 33 0;
+#X connect 42 0 7 0;
+#X connect 42 1 41 0;
+#X connect 43 0 50 0;
+#X connect 44 0 50 0;
+#X connect 45 0 51 0;
+#X connect 49 0 30 0;
+#X connect 49 1 31 0;
+#X connect 49 2 32 0;
+#X connect 50 0 2 0;
+#X connect 50 1 3 0;
+#X connect 50 2 4 0;
+#X connect 50 3 5 0;
+#X connect 50 4 6 0;
+#X connect 50 5 42 0;
+#X connect 50 6 8 0;
+#X connect 50 7 9 0;
+#X connect 50 8 10 0;
+#X connect 53 0 46 0;
+#X connect 54 0 51 0;
+#X connect 55 0 51 0;
+#X connect 56 0 51 0;

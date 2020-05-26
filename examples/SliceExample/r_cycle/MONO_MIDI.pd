@@ -1,0 +1,48 @@
+#N canvas 0 23 849 340 10;
+#X floatatom 45 79 5 0 0 0 - - -;
+#X floatatom 103 79 5 0 0 0 - - -;
+#X obj 75 125 stripnote;
+#X obj 103 100 t f f;
+#X obj 45 154 ==;
+#X obj 76 241 f;
+#X obj 45 178 sel 1;
+#X obj 45 100 t f f f;
+#X obj 45 35 inlet;
+#X obj 103 35 inlet;
+#X obj 15 281 outlet;
+#X obj 76 281 outlet;
+#X text 46 13 note;
+#X text 105 13 vel;
+#X obj 15 241 f;
+#X obj 45 202 t b b;
+#X text 182 59 sends velocity 0 only \; if it comes from the \; last
+pressed note \;;
+#X text 409 56 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 440 178 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 410 86 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 410 143 You may obtain a copy of the License at;
+#X text 410 208 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 410 264 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 7 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 1;
+#X connect 3 0 5 1;
+#X connect 3 1 2 1;
+#X connect 4 0 6 0;
+#X connect 5 0 11 0;
+#X connect 6 0 15 0;
+#X connect 7 0 4 0;
+#X connect 7 1 14 1;
+#X connect 7 2 2 0;
+#X connect 8 0 0 0;
+#X connect 9 0 1 0;
+#X connect 14 0 10 0;
+#X connect 15 0 14 0;
+#X connect 15 1 5 0;

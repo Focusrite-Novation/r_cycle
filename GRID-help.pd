@@ -1,0 +1,206 @@
+#N canvas 0 23 1280 755 10;
+#X declare -path ./utils;
+#X obj 7 11 declare -path ./utils;
+#X obj 35 118 LP_GUI -1;
+#X obj 35 38 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 35 58 status \$1;
+#X obj 46 761 CLOCK -1;
+#X msg 56 646 play;
+#X msg 65 668 stop;
+#X msg 74 689 continue;
+#X floatatom 85 709 5 0 0 0 - - -;
+#X msg 85 730 bpm \$1;
+#X obj 48 605 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 565 397 size \$1;
+#X obj 966 453 b;
+#X msg 48 625 midi \$1;
+#X symbolatom 113 796 10 0 0 0 - - -;
+#X obj 897 84 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 897 104 direction \$1;
+#X msg 939 567 print_args;
+#X msg 409 167 get_size;
+#X floatatom 565 377 5 0 0 0 - - -;
+#X msg 437 210 clear;
+#X obj 939 404 sel 0;
+#X obj 409 142 loadbang;
+#X obj 502 308 print GRID_STATUS;
+#X obj 40 549 bng 15 250 50 0 empty empty clear_both_grid_abd_pattern
+17 7 0 10 -261234 -1 -1;
+#X obj 40 569 s \$0_clear;
+#X obj 437 188 r \$0_clear;
+#X obj 860 156 r \$0_clear;
+#X msg 860 178 clear;
+#X msg 453 330 step \$1 \$2;
+#X text 158 20 TURN ON [LP_GUI];
+#X obj 492 355 list prepend steps;
+#X obj 492 377 list trim;
+#X obj 541 233 list trim;
+#X obj 541 211 list prepend raw_ticks;
+#X floatatom 430 541 5 0 0 1 current_step - -;
+#X msg 430 562 pointer \$1;
+#X obj 148 737 r \$0_to_transport;
+#X obj 966 474 s \$0_trigger;
+#X obj 899 252 s \$0_pointer;
+#X obj 430 517 r \$0_pointer;
+#X obj 990 253 s \$0_raw_ticks_list;
+#X obj 541 184 r \$0_raw_ticks_list;
+#X obj 909 183 r \$0_to_pattern;
+#X obj 453 445 s \$0_to_pattern;
+#X text 618 398 resize [PATTERN] \;;
+#X text 915 83 0 forward \, 1 reverse \;;
+#X obj 919 304 spigot;
+#X obj 919 325 bng 15 250 50 0 empty empty bang_every_tick 17 7 0 10
+-262144 -1 -1;
+#X obj 952 282 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 939 361 5 0 0 1 tick_value - -;
+#X obj 999 419 spigot;
+#X obj 999 440 print TICK_VALUE;
+#X obj 939 382 t f f;
+#X obj 1032 389 tgl 15 0 empty empty print_current_tick_value 17 7
+0 10 -262144 -1 -1 0 1;
+#X obj 430 583 s \$0_to_grid;
+#X obj 453 233 r \$0_to_grid;
+#X text 428 489 usually [PATTERN] \; drives this \;;
+#N canvas 0 23 627 503 PATTERN-EXTRA 0;
+#X msg 189 97 set \$1 \$2;
+#X text 185 56 list of tick_nr + value \;;
+#X text 185 168 list of step_nr + value \;;
+#X msg 189 76 0 1 \, 12 1 \, 94 1;
+#X msg 189 270 dump;
+#X text 186 244 dump list of raw ticks \; useful for updating [GRID]
+\;;
+#X obj 113 361 s \$0_to_pattern;
+#X msg 189 315 print_args;
+#X text 187 298 print [PATTERN] arguments \;;
+#X msg 189 188 0 1 \, 4 1 \, 8 1 \, 12 1;
+#X msg 189 210 step \$1 \$2;
+#X msg 189 143 clear \, steps 0 1 8 0 16 1 24 1 \, dump;
+#X text 188 126 clear then set steps then dump to [GRID] \;;
+#X connect 0 0 6 0;
+#X connect 3 0 0 0;
+#X connect 4 0 6 0;
+#X connect 7 0 6 0;
+#X connect 9 0 10 0;
+#X connect 10 0 6 0;
+#X connect 11 0 6 0;
+#X restore 51 863 pd PATTERN-EXTRA;
+#X obj 830 895 s \$0_to_grid;
+#X text 937 547 print [GRID] arguments \;;
+#X msg 939 617 get_size;
+#X text 937 590 return grid size \; from 3rd outlet \;;
+#X msg 939 689 dump;
+#X text 937 650 dump whole grid (steps not ticks) \; from 2nd outlet
+(list of pairs \; step nr + step value) \;;
+#X text 975 688 useful to update [PATTERN] \;;
+#X msg 939 792 dump;
+#X msg 939 748 steps 0 1 8 0 9 1 10 1 16 1 24 1;
+#X obj 939 770 t b a;
+#N canvas 0 23 325 350 TRANSPORT_BUTTONS 0;
+#X obj 39 116 list trim;
+#X obj 39 95 BUTTON 19 24 play 0;
+#X obj 39 137 s \$0_to_transport;
+#X obj 39 182 list trim;
+#X obj 39 203 s \$0_to_transport;
+#X obj 39 161 BUTTON 29 12 stop 0;
+#X obj 39 252 list trim;
+#X obj 39 273 s \$0_to_transport;
+#X obj 39 231 BUTTON 39 13 continue 0;
+#X text 77 51 TRANSPORT BUTTONS;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 8 0 6 0;
+#X restore 37 467 pd TRANSPORT_BUTTONS;
+#X text 937 720 set steps (list of pairs \; step nr + step value) \;
+;
+#X text 603 230 use a list of raw ticks to \; set the [GRID] ticks
+in between \; steps will be ignored since \; [GRID] only deals with
+steps \;;
+#X msg 939 829 clear;
+#X text 977 824 to clear [GRID] \; to be noticed that this doesn't
+\; clear [PATTERN] as well \, since \; [GRID] and [PATTERN] are decoupled
+\; but [PATTERN] accept the same message \;;
+#X obj 453 276 GRID 41 32 -1;
+#X obj 899 222 PATTERN -1;
+#X obj 40 500 DEVICE_SELECT;
+#X msg 60 86 device LP_X;
+#X msg 148 86 device LP_Pro;
+#X text 342 732 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 373 854 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 343 762 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 343 819 You may obtain a copy of the License at;
+#X text 343 884 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 343 940 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 1 14 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 9 0;
+#X connect 9 0 4 0;
+#X connect 10 0 13 0;
+#X connect 11 0 44 0;
+#X connect 12 0 38 0;
+#X connect 13 0 4 0;
+#X connect 15 0 16 0;
+#X connect 16 0 75 0;
+#X connect 17 0 59 0;
+#X connect 18 0 74 0;
+#X connect 19 0 11 0;
+#X connect 20 0 74 0;
+#X connect 21 1 12 0;
+#X connect 22 0 18 0;
+#X connect 24 0 25 0;
+#X connect 26 0 20 0;
+#X connect 27 0 28 0;
+#X connect 28 0 75 0;
+#X connect 29 0 44 0;
+#X connect 31 0 32 0;
+#X connect 32 0 44 0;
+#X connect 33 0 74 0;
+#X connect 34 0 33 0;
+#X connect 35 0 36 0;
+#X connect 36 0 55 0;
+#X connect 37 0 4 0;
+#X connect 40 0 35 0;
+#X connect 42 0 34 0;
+#X connect 43 0 75 0;
+#X connect 47 0 48 0;
+#X connect 49 0 47 1;
+#X connect 50 0 53 0;
+#X connect 51 0 52 0;
+#X connect 53 0 21 0;
+#X connect 53 1 51 0;
+#X connect 54 0 51 1;
+#X connect 56 0 74 0;
+#X connect 61 0 59 0;
+#X connect 63 0 59 0;
+#X connect 66 0 59 0;
+#X connect 67 0 68 0;
+#X connect 68 0 66 0;
+#X connect 68 1 59 0;
+#X connect 72 0 59 0;
+#X connect 74 0 29 0;
+#X connect 74 1 23 0;
+#X connect 74 1 31 0;
+#X connect 74 2 19 0;
+#X connect 75 0 39 0;
+#X connect 75 1 47 0;
+#X connect 75 2 50 0;
+#X connect 75 3 41 0;
+#X connect 77 0 1 0;
+#X connect 78 0 1 0;

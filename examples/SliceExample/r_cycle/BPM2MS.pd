@@ -1,0 +1,34 @@
+#N canvas 276 280 714 436 10;
+#X obj 28 17 inlet;
+#X floatatom 28 80 5 0 0 0 - - -;
+#X msg 28 100 60000 \$1;
+#X obj 28 121 /;
+#X floatatom 28 142 5 0 0 0 - - -;
+#X obj 28 162 outlet;
+#X obj 28 40 route float print_outlets;
+#X obj 101 63 s \$0_print_outlets;
+#X obj 307 14 r \$0_print_outlets;
+#X obj 307 58 print -n;
+#X msg 307 37 BPM2MS OUTLETS \, 1: result in ms;
+#X text 298 137 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 329 259 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 299 167 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 299 224 You may obtain a copy of the License at;
+#X text 299 289 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 299 345 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 1 0;
+#X connect 6 1 7 0;
+#X connect 8 0 10 0;
+#X connect 10 0 9 0;

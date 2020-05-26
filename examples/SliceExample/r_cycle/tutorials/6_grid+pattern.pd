@@ -1,0 +1,421 @@
+#N canvas 0 23 1280 755 12;
+#X declare -path r_cycle;
+#X declare -path ../;
+#X obj 10 31 DEVICE_SELECT;
+#X obj 10 74 DSP_TOGGLE;
+#X obj 15 231 LP_GUI 0;
+#X msg 16 134 status \$1;
+#X obj 16 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 147 142 device LP_Pro;
+#X msg 178 167 device LP_X;
+#X obj 431 818 CLOCK 1;
+#X obj 946 316 PATTERN 1;
+#X msg 478 519 size \$1;
+#X floatatom 478 499 5 0 0 0 - - -;
+#X msg 365 442 step \$1 \$2;
+#X obj 405 477 list prepend steps;
+#X obj 405 499 list trim;
+#X obj 365 551 s \$0_to_pattern;
+#X obj 946 278 r \$0_to_pattern;
+#X msg 331 338 clear;
+#X msg 921 251 clear;
+#X msg 391 347 dump;
+#X obj 946 346 s \$0_pointer;
+#X floatatom 367 263 5 0 0 1 current_step - -;
+#X msg 367 284 pointer \$1;
+#X obj 367 239 r \$0_pointer;
+#X obj 331 315 r \$0_clear_pattern;
+#X obj 921 223 r \$0_clear_pattern;
+#X obj 986 444 sel 0;
+#X floatatom 986 401 5 0 0 1 raw_value - -;
+#X obj 986 422 t f f;
+#X obj 1018 471 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1018 494 s \$0_pattern_1_trig;
+#X obj 43 834 dac~;
+#X msg 431 753 bpm \$1;
+#X floatatom 431 728 5 0 0 0 - - -;
+#X msg 502 786 play \$1;
+#X msg 573 786 stop \$1;
+#X obj 502 723 BUTTON 19 24 bang 0;
+#X text 596 5 GRID+PATTERN tutorial;
+#N canvas 146 158 744 420 Samples 0;
+#X obj 36 244 SIMPLE_PLAYER;
+#X msg 17 70 load;
+#X msg 78 216 amp \$1;
+#X obj 36 102 r \$0_pattern_1_trig;
+#X obj 195 244 SIMPLE_PLAYER;
+#X msg 182 68 load;
+#X msg 232 215 amp \$1;
+#X obj 195 97 r \$0_pattern_2_trig;
+#X obj 371 240 SIMPLE_PLAYER;
+#X msg 347 69 load;
+#X msg 407 209 amp \$1;
+#X obj 371 96 r \$0_pattern_3_trig;
+#X obj 541 240 SIMPLE_PLAYER;
+#X msg 513 69 load;
+#X msg 577 209 amp \$1;
+#X obj 541 96 r \$0_pattern_4_trig;
+#X obj 36 127 b;
+#X obj 195 122 b;
+#X obj 371 122 b;
+#X obj 541 129 b;
+#X obj 36 287 outlet~;
+#X obj 17 13 inlet;
+#X obj 17 41 route load_sample1 load_sample2 load_sample3 load_sample4
+, f 95;
+#X obj 78 159 r \$0_sample1_level;
+#X obj 232 157 r \$0_sample2_level;
+#X obj 407 155 r \$0_sample3_level;
+#X obj 577 155 r \$0_sample4_level;
+#X obj 78 187 / 127;
+#X obj 232 186 / 127;
+#X obj 407 183 / 127;
+#X obj 577 183 / 127;
+#X text 23 335 'SIMPLE_PLAYER' is used to load and play samples. 'MULTI_SAMPLER'
+can also be used for this., f 97;
+#X obj 32 367 MULTI_SAMPLER 1;
+#X connect 0 0 20 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 16 0;
+#X connect 4 0 20 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 17 0;
+#X connect 8 0 20 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 11 0 18 0;
+#X connect 12 0 20 0;
+#X connect 13 0 12 0;
+#X connect 14 0 12 0;
+#X connect 15 0 19 0;
+#X connect 16 0 0 0;
+#X connect 17 0 4 0;
+#X connect 18 0 8 0;
+#X connect 19 0 12 0;
+#X connect 21 0 22 0;
+#X connect 22 0 1 0;
+#X connect 22 1 5 0;
+#X connect 22 2 9 0;
+#X connect 22 3 13 0;
+#X connect 23 0 27 0;
+#X connect 24 0 28 0;
+#X connect 25 0 29 0;
+#X connect 26 0 30 0;
+#X connect 27 0 2 0;
+#X connect 28 0 6 0;
+#X connect 29 0 10 0;
+#X connect 30 0 14 0;
+#X restore 43 806 pd Samples;
+#X msg 41 676 load_sample1;
+#X msg 63 701 load_sample2;
+#X msg 78 728 load_sample3;
+#X msg 91 755 load_sample4;
+#X obj 193 693 vsl 15 90 0 127 0 0 \$0_sample1_level empty 1 5 -9 0
+10 -262144 -1 -1 0 0;
+#X obj 227 692 vsl 15 90 0 127 0 0 \$0_sample2_level empty 2 5 -9 0
+10 -262144 -1 -1 0 0;
+#X obj 259 693 vsl 15 90 0 127 0 0 \$0_sample3_level empty 3 5 -9 0
+10 -262144 -1 -1 0 0;
+#X obj 291 692 vsl 15 90 0 127 0 0 \$0_sample4_level empty 4 5 -9 0
+10 -262144 -1 -1 0 0;
+#X obj 431 683 loadbang;
+#X msg 431 704 120;
+#X text 322 81 This example uses four instances of 'GRID' & 'PATTERN'
+to make a four track \, sixteen step sequencer \, but each instance
+of 'GRID' and 'PATTERN' works independently \, making it very simple
+to create a broad range of sequencers., f 139;
+#X text 322 129 The first instance of 'GRID' & 'PATTERN' is explained
+below and then copied \, with the necessary changes applied \, to 'pd
+GRID+PATTERN_2-4'., f 139;
+#X msg 404 372 get_size;
+#X text 477 237 <<< Step number value sent from 'PATTERN' indicates
+the current step on 'GRID';
+#X text 472 345 <<< Additional methods for 'GRID';
+#X text 487 440 <<< Current switch status \, a list of status of all
+switches and grid size is sent to 'PATTERN'.;
+#X text 1026 314 <<< 'PATTERN' requires a clock ID argument.;
+#X obj 966 375 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 1038 346 <<< First outlet sends out the current step;
+#X text 991 373 <<< Second outlet sends out a bang for each tick;
+#X text 126 805 <<<link to MULTI_SAMPLER;
+#X obj 434 187 cnv 15 75 30 empty empty GRID 20 12 0 14 -260097 -66577
+0;
+#X obj 982 179 cnv 15 95 30 empty empty PATTERN 20 12 0 14 -257985
+-66577 0;
+#X obj 84 639 cnv 15 155 30 empty empty SAMPLER_&_MIXER 20 12 0 14
+-204786 -66577 0;
+#X obj 1011 702 bng 15 250 50 0 \$0_clear_pattern empty Clear_Pattern_1
+20 10 0 10 -258113 -1 -1;
+#X obj 1011 744 bng 15 250 50 0 \$0_clear_pattern_2 empty Clear_Pattern_2
+20 10 0 10 -258113 -1 -1;
+#X obj 1011 785 bng 15 250 50 0 \$0_clear_pattern_3 empty Clear_Pattern_3
+20 10 0 10 -258113 -1 -1;
+#X obj 1012 827 bng 15 250 50 0 \$0_clear_pattern_4 empty Clear_Pattern_4
+20 10 0 10 -258113 -1 -1;
+#X obj 1011 677 BUTTON 91 36 bang 0;
+#X obj 1011 720 BUTTON 92 36 bang 0;
+#X obj 1011 762 BUTTON 93 36 bang 0;
+#X obj 1012 803 BUTTON 94 36 bang 0;
+#N canvas 194 63 595 123 GRID+PATTERN_2-4 0;
+#N canvas 397 66 565 402 GRID+PATTERN_2 0;
+#X msg 5 141 clear;
+#X obj 5 115 r \$0_clear_pattern_2;
+#X msg 172 298 size \$1;
+#X floatatom 172 278 5 0 0 0 - - -;
+#X msg 49 231 step \$1 \$2;
+#X obj 99 256 list prepend steps;
+#X obj 99 278 list trim;
+#X obj 49 353 s \$0_to_pattern_2;
+#X msg 49 80 pointer \$1;
+#X floatatom 49 54 5 0 0 0 - - -;
+#X obj 259 149 PATTERN 1;
+#X obj 259 116 r \$0_to_pattern_2;
+#X obj 259 179 s \$0_pointer_2;
+#X obj 49 21 r \$0_pointer_2;
+#X obj 299 254 sel 0;
+#X floatatom 299 211 5 0 0 1 tick_value - -;
+#X obj 299 232 t f f;
+#X obj 331 281 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 331 304 s \$0_pattern_2_trig;
+#X msg 221 92 clear;
+#X obj 221 66 r \$0_clear_pattern_2;
+#X msg 61 145 get_size;
+#X obj 49 197 GRID 61 16 14 0;
+#X connect 0 0 22 0;
+#X connect 1 0 0 0;
+#X connect 2 0 7 0;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 8 0 22 0;
+#X connect 9 0 8 0;
+#X connect 10 0 12 0;
+#X connect 10 2 15 0;
+#X connect 11 0 10 0;
+#X connect 13 0 9 0;
+#X connect 14 1 17 0;
+#X connect 15 0 16 0;
+#X connect 16 0 14 0;
+#X connect 17 0 18 0;
+#X connect 19 0 10 0;
+#X connect 20 0 19 0;
+#X connect 21 0 22 0;
+#X connect 22 0 4 0;
+#X connect 22 1 5 0;
+#X connect 22 2 3 0;
+#X restore 15 16 pd GRID+PATTERN_2;
+#N canvas 504 142 564 402 GRID+PATTERN_3 0;
+#X msg 5 141 clear;
+#X msg 173 298 size \$1;
+#X floatatom 173 278 5 0 0 0 - - -;
+#X msg 49 231 step \$1 \$2;
+#X obj 100 256 list prepend steps;
+#X obj 100 278 list trim;
+#X msg 49 80 pointer \$1;
+#X floatatom 49 54 5 0 0 0 - - -;
+#X obj 259 149 PATTERN 1;
+#X obj 299 254 sel 0;
+#X floatatom 299 211 5 0 0 1 tick_value - -;
+#X obj 299 232 t f f;
+#X obj 331 281 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 221 92 clear;
+#X obj 49 353 s \$0_to_pattern_3;
+#X obj 331 304 s \$0_pattern_3_trig;
+#X obj 259 179 s \$0_pointer_3;
+#X obj 49 21 r \$0_pointer_3;
+#X obj 259 116 r \$0_to_pattern_3;
+#X obj 5 115 r \$0_clear_pattern_3;
+#X obj 221 66 r \$0_clear_pattern_3;
+#X msg 61 145 get_size;
+#X obj 49 197 GRID 41 16 34 0;
+#X connect 0 0 22 0;
+#X connect 1 0 14 0;
+#X connect 2 0 1 0;
+#X connect 3 0 14 0;
+#X connect 4 0 5 0;
+#X connect 5 0 14 0;
+#X connect 6 0 22 0;
+#X connect 7 0 6 0;
+#X connect 8 0 16 0;
+#X connect 8 2 10 0;
+#X connect 9 1 12 0;
+#X connect 10 0 11 0;
+#X connect 11 0 9 0;
+#X connect 12 0 15 0;
+#X connect 13 0 8 0;
+#X connect 17 0 7 0;
+#X connect 18 0 8 0;
+#X connect 19 0 0 0;
+#X connect 20 0 13 0;
+#X connect 21 0 22 0;
+#X connect 22 0 3 0;
+#X connect 22 1 4 0;
+#X connect 22 2 2 0;
+#X restore 16 43 pd GRID+PATTERN_3;
+#N canvas 503 142 565 402 GRID+PATTERN_4 0;
+#X msg 5 141 clear;
+#X msg 173 298 size \$1;
+#X floatatom 173 278 5 0 0 0 - - -;
+#X msg 49 231 step \$1 \$2;
+#X obj 100 256 list prepend steps;
+#X obj 100 278 list trim;
+#X msg 49 80 pointer \$1;
+#X floatatom 49 54 5 0 0 0 - - -;
+#X obj 259 149 PATTERN 1;
+#X obj 299 254 sel 0;
+#X floatatom 299 211 5 0 0 1 tick_value - -;
+#X obj 299 232 t f f;
+#X obj 331 281 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 221 92 clear;
+#X obj 5 115 r \$0_clear_pattern_4;
+#X obj 49 353 s \$0_to_pattern_4;
+#X obj 259 116 r \$0_to_pattern_4;
+#X obj 221 66 r \$0_clear_pattern_4;
+#X obj 259 179 s \$0_pointer_4;
+#X obj 331 304 s \$0_pattern_4_trig;
+#X obj 49 21 r \$0_pointer_4;
+#X msg 61 145 get_size;
+#X obj 49 197 GRID 21 16 44 0;
+#X connect 0 0 22 0;
+#X connect 1 0 15 0;
+#X connect 2 0 1 0;
+#X connect 3 0 15 0;
+#X connect 4 0 5 0;
+#X connect 5 0 15 0;
+#X connect 6 0 22 0;
+#X connect 7 0 6 0;
+#X connect 8 0 18 0;
+#X connect 8 2 10 0;
+#X connect 9 1 12 0;
+#X connect 10 0 11 0;
+#X connect 11 0 9 0;
+#X connect 12 0 19 0;
+#X connect 13 0 8 0;
+#X connect 14 0 0 0;
+#X connect 16 0 8 0;
+#X connect 17 0 13 0;
+#X connect 20 0 7 0;
+#X connect 21 0 22 0;
+#X connect 22 0 3 0;
+#X connect 22 1 4 0;
+#X connect 22 2 2 0;
+#X restore 16 71 pd GRID+PATTERN_4;
+#X text 154 16 <<< Each subpatch contains the same configuartion of
+'GRID' & 'PATTERN' in the main patch. The send & receive objects and
+'GRID' arguments are adjusted for each to create a new pattern. Each
+'PATTERN' has an argument of '1' as each instance is syncing to the
+same clock.;
+#X restore 1213 220 pd GRID+PATTERN_2-4;
+#X obj 1196 178 cnv 15 165 30 empty empty GRID+PATTERN_2-4 20 12 0
+14 -261682 -66577 0;
+#X msg 1011 651 print_args;
+#X obj 997 570 cnv 15 220 30 empty empty 'CLEAR_PATTERN'_BUTTONS 20
+12 0 14 -4032 -66577 0;
+#X text 1177 677 <<< 'BUTTON' arguments: 1: elem_id;
+#X text 1346 697 2: color;
+#X text 1347 718 3: symbol;
+#X text 1348 739 4: LP_GUI id;
+#X text 1009 607 The four 'BUTTON' widgets along the top row will clear
+patterns 1 - 4 (L > R).;
+#X obj 487 634 cnv 15 80 30 empty empty CLOCK 20 12 0 14 -261234 -66577
+0;
+#X text 348 728 Set BPM >>>;
+#X msg 381 783 print_args;
+#X obj 111 76 cnv 15 120 30 empty empty TURN_DSP_ON 20 12 0 14 -204786
+-66577 0;
+#X msg 186 192 device LPM_MK3;
+#X obj 365 409 GRID 81 16 24 0;
+#X text 672 722 <<< "BUTTON" widgets triggering \; ----'play' & 'stop'
+methods.;
+#X text 323 37 Guide - For sequencer applications 'GRID' can be used
+in conjunction with 'PATTERN'. 'GRID' \, as explored in the previous
+tutorial (T_GRID_BASIC) provides information on the state of switches
+within the grid \, 'PATTERN' can then use this information to create
+a sequence., f 139;
+#X text 569 825 <<< Clock followed by an integer defines the clock
+id e.g. [CLOCK 1].;
+#X text 1104 400 <<< Third outlet sends out raw values stored in the
+pattern \; a value greater than 0 can be used to trigger a sample.
+Fourth outlet of 'PATTERN' sends out raw ticks in a list.;
+#X obj 573 759 BUTTON 29 9 bang 0;
+#X obj 10 7 declare -path r_cycle;
+#X msg 127 116 device LP_Pro_MK3;
+#N canvas 1 78 486 150 MISC 0;
+#X text 32 25 This is needed to make the r_cycle objects accessible
+even before placing the r_cycle folder in a place part of the path
+search in Pd \;;
+#X obj 34 87 declare -path ../;
+#X restore 15 626 pd MISC;
+#X text 22 911 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 53 1033 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 23 941 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 23 998 You may obtain a copy of the License at;
+#X text 23 1063 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 23 1119 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
+#X connect 8 0 19 0;
+#X connect 8 1 55 0;
+#X connect 8 2 26 0;
+#X connect 9 0 14 0;
+#X connect 10 0 9 0;
+#X connect 11 0 14 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 15 0 8 0;
+#X connect 16 0 84 0;
+#X connect 17 0 8 0;
+#X connect 18 0 84 0;
+#X connect 20 0 21 0;
+#X connect 21 0 84 0;
+#X connect 22 0 20 0;
+#X connect 23 0 16 0;
+#X connect 24 0 17 0;
+#X connect 25 1 28 0;
+#X connect 26 0 27 0;
+#X connect 27 0 25 0;
+#X connect 28 0 29 0;
+#X connect 31 0 7 0;
+#X connect 32 0 31 0;
+#X connect 33 0 7 0;
+#X connect 34 0 7 0;
+#X connect 35 0 33 0;
+#X connect 37 0 30 0;
+#X connect 37 0 30 1;
+#X connect 38 0 37 0;
+#X connect 39 0 37 0;
+#X connect 40 0 37 0;
+#X connect 41 0 37 0;
+#X connect 46 0 47 0;
+#X connect 47 0 32 0;
+#X connect 50 0 84 0;
+#X connect 66 0 62 0;
+#X connect 67 0 63 0;
+#X connect 68 0 64 0;
+#X connect 69 0 65 0;
+#X connect 72 0 66 0;
+#X connect 81 0 7 0;
+#X connect 83 0 2 0;
+#X connect 84 0 11 0;
+#X connect 84 1 12 0;
+#X connect 84 2 10 0;
+#X connect 89 0 34 0;
+#X connect 91 0 2 0;

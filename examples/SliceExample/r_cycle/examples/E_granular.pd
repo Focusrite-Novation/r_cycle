@@ -1,0 +1,143 @@
+#N canvas 1 78 817 687 10;
+#X declare -path r_cycle;
+#X declare -path ../;
+#X obj 611 510 DSP_TOGGLE;
+#X obj 21 430 DEVICE_SELECT;
+#X obj 380 164 G_SYNTH;
+#X obj 611 465 loadbang;
+#X msg 611 487 1;
+#X text 19 477 BOTTOM ROW HORIZ-SLIDER: grain size \; SECOND HORIZ-SLIDER
+FROM BOTTOM: grain glissando \; BIG DRUM PAD TOP-LEFT: offset \; LEFTMOST
+VERT-SLIDER: waveshaper function \; RIGHTMOST VERT-SLIDER: waveshaper
+gain \; \; different waveshaper functions need different gains \; be
+careful when changing function!!!!! \;;
+#X obj 526 134 cnv 15 180 25 empty empty load_an_audio_file_first 5
+12 0 12 -258113 -1 0;
+#N canvas 1 78 793 628 WIDGETS 0;
+#X obj 227 94 cnv 15 520 25 empty empty GUI 5 8 0 14 -204800 -66577
+0;
+#X msg 263 163 offset \$1;
+#X msg 592 190 size \$1;
+#X obj 592 144 * 0.7;
+#X obj 592 168 + 0.05;
+#X msg 434 167 glissando \$1;
+#X obj 434 120 pow 2;
+#X obj 592 97 RADIO 11 8 120 20 0 0;
+#X obj 434 97 RADIO 21 8 120 36 0 0;
+#X obj 263 141 pow 2;
+#X obj 263 119 / 36;
+#X obj 434 143 * 2000;
+#X msg 126 192 spray 1;
+#X msg 106 151 volume 1;
+#X msg 116 172 rand_spread 0;
+#X obj 592 122 pow 2;
+#X obj 131 302 s \$0_to_G_SYNTH;
+#X obj 132 24 loadbang;
+#X obj 248 395 cnv 15 350 25 empty empty GUI 5 8 0 14 -204800 -66577
+0;
+#X msg 310 456 function \$1;
+#X floatatom 310 434 5 0 0 0 - - -;
+#X floatatom 445 508 5 0 0 0 - - -;
+#X msg 445 528 gain \$1;
+#X obj 448 489 hsl 128 15 1 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 5644 0;
+#X obj 445 420 pow 2;
+#X text 280 349 WAVASHARE FUNCTIONS \; 0 LINEAR - 1 POWER FUNCTION
+- 2 EXPONENTIAL FUNCTION - 3 CHEBYCHEV_2 - 4 CHEBYCHEV_3 - 5 CHEBYCHEV_4
+- 6 CHEBYCHEV_5;
+#X obj 445 442 * 10;
+#X obj 280 398 RADIO 37 6 120 79 1 0;
+#X obj 445 398 RADIO 38 6 120 89 1 0;
+#X obj 310 571 s \$0_to_WSHAPES;
+#X msg 264 441 0;
+#X msg 419 466 5;
+#X obj 263 97 DRUM_PADS 0 2 6 73 0 0;
+#X connect 1 0 16 0;
+#X connect 2 0 16 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 16 0;
+#X connect 6 0 11 0;
+#X connect 7 0 15 0;
+#X connect 8 0 6 0;
+#X connect 9 0 1 0;
+#X connect 10 0 9 0;
+#X connect 11 0 5 0;
+#X connect 12 0 16 0;
+#X connect 13 0 16 0;
+#X connect 14 0 16 0;
+#X connect 15 0 3 0;
+#X connect 17 0 13 0;
+#X connect 17 0 14 0;
+#X connect 17 0 12 0;
+#X connect 17 0 30 0;
+#X connect 17 0 31 0;
+#X connect 19 0 29 0;
+#X connect 20 0 19 0;
+#X connect 21 0 22 0;
+#X connect 22 0 29 0;
+#X connect 23 0 21 0;
+#X connect 24 0 26 0;
+#X connect 26 0 23 0;
+#X connect 27 1 20 0;
+#X connect 28 0 24 0;
+#X connect 30 0 19 0;
+#X connect 31 0 23 0;
+#X connect 32 0 10 0;
+#X restore 160 430 pd WIDGETS;
+#X obj 380 143 r \$0_to_G_SYNTH;
+#N canvas 1 78 733 465 DSP 0;
+#X obj 77 26 inlet~;
+#X obj 169 26 inlet~;
+#X obj 78 249 dac~;
+#X obj 78 172 WAVESHAPER;
+#X msg 324 104 mix \$1;
+#X obj 327 86 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 0;
+#X obj 168 172 WAVESHAPER;
+#X obj 324 41 loadbang;
+#X msg 324 63 1;
+#X obj 78 210 *~ 0.7;
+#X obj 123 210 *~ 0.7;
+#X obj 135 126 r \$0_to_WSHAPES;
+#X connect 0 0 3 0;
+#X connect 1 0 6 0;
+#X connect 3 0 9 0;
+#X connect 4 0 3 1;
+#X connect 4 0 6 1;
+#X connect 5 0 4 0;
+#X connect 6 0 10 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 2 0;
+#X connect 10 0 2 1;
+#X connect 11 0 3 1;
+#X connect 11 0 6 1;
+#X restore 380 412 pd DSP;
+#X text 227 429 <<< r_cycle widgets \;;
+#X obj 576 533 declare -path r_cycle;
+#X obj 21 29 LP_GUI 0;
+#N canvas 1 78 486 150 MISC 0;
+#X text 32 25 This is needed to make the r_cycle objects accessible
+even before placing the r_cycle folder in a place part of the path
+search in Pd \;;
+#X obj 34 87 declare -path ../;
+#X restore 660 553 pd MISC;
+#X text 23 639 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 54 761 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 24 669 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 24 726 You may obtain a copy of the License at;
+#X text 24 791 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 24 847 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 2 0 9 0;
+#X connect 2 1 9 1;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 8 0 2 0;

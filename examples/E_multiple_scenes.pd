@@ -1,0 +1,174 @@
+#N canvas 123 84 686 734 10;
+#X declare -path r_cycle;
+#X declare -path ../;
+#X obj 358 159 LP_GUI 1;
+#X text 251 136 SCENE 1;
+#X text 562 138 SCENE 2;
+#X text 355 575 all widgets with last argument 1 \; are linked to this
+[LP_GUI 1] \;;
+#X text 25 554 all widgets with last argument 0 \; are linked to this
+[LP_GUI 0] \;;
+#X obj 167 69 vradio 15 1 0 2 \$0_from_g_scene \$0_to_g_scene empty
+0 -8 0 10 -262144 -1 -1 1;
+#X text 185 66 scene 1;
+#X text 185 81 scene 2;
+#X obj 167 38 cnv 15 120 20 empty empty SELECT_THE_SCENE 4 12 0 12
+-4034 -66577 0;
+#X text 25 4 1 select device \; 2 select scene \;;
+#X obj 27 69 vradio 15 1 0 4 \$0_from_g_device \$0_to_g_device empty
+0 -8 0 10 -262144 -1 -1 1;
+#X text 44 68 LP Pro MkI;
+#X text 44 83 LP X;
+#X obj 27 38 cnv 15 130 20 empty empty SELECT_THE_DEVICE 4 12 0 12
+-4032 -66577 0;
+#N canvas 0 23 380 174 LP_GUI_PARAMS 0;
+#X obj 23 78 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 23 98 status \$1;
+#X obj 23 53 == 0;
+#X obj 23 31 r \$0_from_g_scene;
+#X obj 23 149 outlet;
+#X msg 210 99 device LP_X;
+#X msg 210 79 device LP_Pro;
+#X obj 210 29 r \$0_from_g_device;
+#X msg 210 119 device LPM_MK3;
+#X msg 210 139 device LP_Pro_MK3;
+#X obj 210 50 sel 0 1 2 3;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 10 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X connect 10 0 6 0;
+#X connect 10 1 5 0;
+#X connect 10 2 8 0;
+#X connect 10 3 9 0;
+#X restore 27 133 pd LP_GUI_PARAMS;
+#N canvas 0 23 349 174 LP_GUI_PARAMS 0;
+#X obj 23 78 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X msg 23 98 status \$1;
+#X obj 109 54 r \$0_device;
+#X obj 23 31 r \$0_from_g_scene;
+#X obj 23 139 outlet;
+#X obj 23 53 == 1;
+#X msg 210 99 device LP_X;
+#X msg 210 79 device LP_Pro;
+#X obj 210 29 r \$0_from_g_device;
+#X msg 210 119 device LPM_MK3;
+#X obj 210 50 sel 0 1 2 3;
+#X msg 210 139 device LP_Pro_MK3;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 10 0;
+#X connect 9 0 4 0;
+#X connect 10 0 7 0;
+#X connect 10 1 6 0;
+#X connect 10 2 9 0;
+#X connect 10 3 11 0;
+#X connect 11 0 4 0;
+#X restore 358 133 pd LP_GUI_PARAMS;
+#N canvas 0 23 450 300 UTILS 0;
+#X obj 30 129 DEVICE_SELECT;
+#X obj 30 101 DSP_TOGGLE;
+#X obj 30 55 loadbang;
+#X msg 30 77 1;
+#X obj 30 174 declare -path r_cycle;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X restore 27 614 pd UTILS;
+#N canvas 222 91 732 455 WIDGETS 0;
+#X floatatom 228 82 5 0 0 0 - - -;
+#X floatatom 267 82 5 0 0 0 - - -;
+#X obj 35 292 BUTTON 82 101 test_2 1;
+#X floatatom 43 215 5 0 0 0 - - -;
+#X floatatom 94 215 5 0 0 0 - - -;
+#X floatatom 228 173 5 0 0 0 - - -;
+#X floatatom 292 173 5 0 0 0 - - -;
+#X floatatom 357 173 5 0 0 0 - - -;
+#X obj 228 141 RADIO 44 5 120 127 1 0;
+#X floatatom 160 81 5 0 0 0 - - -;
+#X symbolatom 43 81 10 0 0 0 - - -;
+#X obj 43 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 43 51 BUTTON 81 110 test 0;
+#X obj 43 141 KEYBOARD 0 60 0;
+#X obj 150 174 unpack;
+#X floatatom 150 196 5 0 0 0 - - -;
+#X floatatom 187 196 5 0 0 0 - - -;
+#X floatatom 306 82 5 0 0 0 - - -;
+#X obj 345 83 unpack;
+#X floatatom 345 105 5 0 0 0 - - -;
+#X floatatom 382 105 5 0 0 0 - - -;
+#X obj 122 364 unpack;
+#X floatatom 122 386 5 0 0 0 - - -;
+#X floatatom 159 386 5 0 0 0 - - -;
+#X floatatom 35 364 5 0 0 0 - - -;
+#X floatatom 64 384 5 0 0 0 - - -;
+#X obj 35 332 KEYBOARD 2 36 1;
+#X floatatom 106 175 5 0 0 0 - - -;
+#X floatatom 87 364 5 0 0 0 - - -;
+#X text 242 315 all widgets with last argument 1 \; are linked to [LP_GUI
+1] \;;
+#X text 464 84 all widgets with last argument 0 \; are linked to [LP_GUI
+0] \;;
+#X obj 228 51 DRUM_PADS 0 3 2 20 0 0;
+#X connect 8 0 5 0;
+#X connect 8 1 6 0;
+#X connect 8 2 7 0;
+#X connect 10 0 11 0;
+#X connect 12 0 10 0;
+#X connect 12 1 9 0;
+#X connect 13 0 3 0;
+#X connect 13 1 4 0;
+#X connect 13 2 27 0;
+#X connect 13 3 14 0;
+#X connect 14 0 15 0;
+#X connect 14 1 16 0;
+#X connect 18 0 19 0;
+#X connect 18 1 20 0;
+#X connect 21 0 22 0;
+#X connect 21 1 23 0;
+#X connect 26 0 24 0;
+#X connect 26 1 25 0;
+#X connect 26 2 28 0;
+#X connect 26 3 21 0;
+#X connect 31 0 0 0;
+#X connect 31 1 1 0;
+#X connect 31 2 17 0;
+#X connect 31 3 18 0;
+#X restore 27 590 pd WIDGETS;
+#X text 44 98 LPM MK3;
+#X text 97 588 <<< double-click to \; --- see all WIDGETS \;;
+#X obj 27 159 LP_GUI 0;
+#X text 44 114 LP_Pro_MK3;
+#N canvas 1 78 486 150 MISC 0;
+#X text 32 25 This is needed to make the r_cycle objects accessible
+even before placing the r_cycle folder in a place part of the path
+search in Pd \;;
+#X obj 34 87 declare -path ../;
+#X restore 27 638 pd MISC;
+#X text 25 681 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 56 803 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 26 711 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 26 768 You may obtain a copy of the License at;
+#X text 26 833 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 26 889 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 14 0 20 0;
+#X connect 15 0 0 0;

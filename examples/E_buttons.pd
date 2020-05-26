@@ -1,0 +1,46 @@
+#N canvas 187 78 863 700 12;
+#X declare -path r_cycle;
+#X declare -path ../;
+#X obj 29 19 declare -path r_cycle;
+#X obj 28 92 LP_GUI -1;
+#X floatatom 525 248 5 0 0 1 status - -;
+#X obj 29 45 DEVICE_SELECT;
+#X text 271 69 LP_GUI;
+#X text 628 219 BUTTON ARGS \; 1: elem_id (pad no.) \; 2: color \;
+3: symbol \; 4: LP_GUI_id \; BUTTON METHODS \; - None \; BUTTON OUTLETS
+\; 1: symbol \; 2: status \;;
+#X obj 372 224 BUTTON 32 24 but_1 -1;
+#X symbolatom 372 249 10 0 0 0 - - -;
+#X floatatom 525 358 5 0 0 1 status - -;
+#X symbolatom 372 359 10 0 0 0 - - -;
+#X obj 372 334 BUTTON 69 45 but_2 -1;
+#X obj 372 382 print BUTTON;
+#X obj 372 272 print BUTTON;
+#X text 389 52 HOW TO \; --- \; - select the right MIDI ports \; -
+click on the device 'device' and pick your LP model \; - turn on LP_GUI
+\; - use LP to control the buttons and check the Pd objects \;;
+#N canvas 1 78 486 150 MISC 0;
+#X text 32 25 This is needed to make the r_cycle objects accessible
+even before placing the r_cycle folder in a place part of the path
+search in Pd \;;
+#X obj 34 87 declare -path ../;
+#X restore 28 496 pd MISC;
+#X text 25 550 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 56 672 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 26 580 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 26 637 You may obtain a copy of the License at;
+#X text 26 702 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 26 758 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 6 0 7 0;
+#X connect 6 1 2 0;
+#X connect 7 0 12 0;
+#X connect 9 0 11 0;
+#X connect 10 0 9 0;
+#X connect 10 1 8 0;

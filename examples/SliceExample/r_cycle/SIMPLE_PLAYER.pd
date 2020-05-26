@@ -1,0 +1,89 @@
+#N canvas 312 41 968 552 10;
+#X obj 178 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 208 168 openpanel;
+#X obj 208 303 soundfiler;
+#X obj 128 32 array define \$0_buffer 128;
+#X floatatom 208 324 7 0 0 0 - - -;
+#X obj 208 344 s \$0_sample_size;
+#X obj 30 50 inlet;
+#X obj 30 393 outlet~;
+#X text 33 26 play;
+#X obj 30 161 b;
+#X obj 30 222 tabplay~ \$0_buffer;
+#X msg 208 240 read -resize \$1;
+#X obj 208 261 list append \$0_buffer;
+#X obj 208 282 list trim;
+#X obj 462 29 loadbang;
+#X obj 462 50 symbol \$1;
+#X obj 462 71 route symbol;
+#X obj 462 92 t s s;
+#X obj 495 114 list fromsymbol;
+#X obj 495 135 list length;
+#X obj 495 156 != 0;
+#X obj 462 183 spigot;
+#X obj 30 337 *~;
+#X obj 78 317 line~;
+#X obj 78 268 / 127;
+#X msg 78 296 \$1 2;
+#X obj 30 191 del 2;
+#X obj 30 121 route bang load read velocity amp print_methods print_outlets
+, f 64;
+#X obj 302 147 s \$0_print_methods;
+#X obj 337 175 s \$0_print_outlets;
+#X obj 623 58 r \$0_print_methods;
+#X obj 650 108 r \$0_print_outlets;
+#X msg 623 79 SIMPLE_PLAYER METHODS \, bang \, load \, read \, velocity
+\, amp \;;
+#X msg 650 129 SIMPLE_PLAYER OUTLETS \, 1: audio out \;;
+#X obj 624 164 print -n;
+#X obj 218 208 symbol;
+#X text 570 265 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 601 387 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 571 295 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 571 352 You may obtain a copy of the License at;
+#X text 571 417 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 571 473 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 1 0;
+#X connect 1 0 11 0;
+#X connect 2 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 27 0;
+#X connect 9 0 26 0;
+#X connect 10 0 22 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 2 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 21 0;
+#X connect 17 1 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 1;
+#X connect 21 0 11 0;
+#X connect 22 0 7 0;
+#X connect 23 0 22 1;
+#X connect 24 0 25 0;
+#X connect 25 0 23 0;
+#X connect 26 0 10 0;
+#X connect 27 0 9 0;
+#X connect 27 1 1 0;
+#X connect 27 2 35 0;
+#X connect 27 3 24 0;
+#X connect 27 4 25 0;
+#X connect 27 5 28 0;
+#X connect 27 6 29 0;
+#X connect 30 0 32 0;
+#X connect 31 0 33 0;
+#X connect 32 0 34 0;
+#X connect 33 0 34 0;
+#X connect 35 0 11 0;

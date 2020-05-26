@@ -1,0 +1,154 @@
+#N canvas 0 40 1280 738 12;
+#X declare -path r_cycle;
+#X declare -path ../;
+#X obj 11 36 DEVICE_SELECT;
+#X obj 16 211 LP_GUI 1;
+#X obj 15 95 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 15 118 status \$1;
+#X msg 100 119 device LP_Pro;
+#X msg 100 139 device LP_X;
+#X obj 328 257 MONO_MIDI;
+#X floatatom 328 300 5 0 0 0 - - -;
+#X floatatom 388 328 5 0 0 0 - - -;
+#X obj 328 379 mtof;
+#X obj 328 525 osc~;
+#X obj 378 608 *~;
+#X obj 439 498 line~;
+#X msg 439 471 \$1 5;
+#X obj 439 445 / 127;
+#X obj 177 37 DSP_TOGGLE;
+#X obj 378 648 dac~;
+#X floatatom 852 487 5 0 0 0 - - -;
+#X obj 378 525 phasor~;
+#X obj 328 564 *~;
+#X obj 378 566 *~;
+#X msg 852 570 1 \$1;
+#X obj 852 595 -;
+#X floatatom 852 620 5 0 0 0 - - -;
+#X msg 808 520 \$1 5;
+#X obj 808 546 line~;
+#X obj 852 665 line~;
+#X msg 852 641 \$1 5;
+#X obj 328 185 r \$0_octave;
+#X floatatom 921 192 5 0 0 0 - - -;
+#X obj 921 282 s \$0_octave;
+#X msg 921 252 octave \$1;
+#X obj 921 222 + 4;
+#X obj 820 394 RADIO 61 2 3 44 0 1;
+#X obj 889 118 RADIO 65 4 3 12 0 1;
+#X text 541 8 Velocity Sensitive Mono Synth;
+#X obj 820 430 loadbang;
+#X msg 820 455 0;
+#X obj 156 63 cnv 15 155 30 empty empty ^^_Turn_on_audio 20 12 0 14
+-257985 -66577 0;
+#X obj 327 147 cnv 15 165 30 empty empty Keyboard_&_Synth 20 12 0 14
+-260097 -66577 0;
+#X obj 815 355 cnv 15 120 30 empty empty OSC_Select 20 12 0 14 -260097
+-66577 0;
+#X obj 328 212 KEYBOARD 2 12 1;
+#X obj 889 81 cnv 15 135 30 empty empty Octave_range 20 12 0 14 -260097
+-66577 0;
+#X text 333 57 Guide - The two buttons on the left side of the GUI
+select between sine & saw waveforms \, the four buttons on the right
+change the octave range.;
+#X text 403 256 <<< MONO_MIDI converts the output of KEYBOARD into
+single note and velocity values;
+#X text 374 299 <<< Note value;
+#X text 434 328 <<< Velocity value;
+#X text 375 379 <<< MIDI note value is converted to Hz to drive the
+oscillators;
+#X text 454 210 <<< Keyboard widget (row 2 \, transposition 12 semitones
+\, LP_GUI id - 1);
+#X text 895 488 <<< Index (selected button);
+#X text 854 519 <<< 0-1 provides an amplitude value for the saw wave.
+;
+#X text 898 595 <<< Index is inverted to provide an amplitude value
+for the sine wave.;
+#X text 1048 117 <<< RADIO widget provides 4 buttons to change the
+octave range (args - elem_id - 65 \, no. of buttons - 4 \, on color
+- white \, off color - orange \, orientartion - horizontal \, LP_GUI
+id - 1), f 49;
+#X text 979 393 <<< RADIO widget provides buttons to switch between
+OSCs (args - elem_id 61 \, no. of buttons 2 \, on color - white \,
+off color - purple \, orientation - horizontal \, LP_GUI id - 1);
+#X text 969 192 <<< Index value is scaled and the result provides a
+value for an octave message which is sent to KEYBOARD.;
+#X obj 328 498 line~;
+#X msg 328 471 \$1 5;
+#X obj 328 403 t f f;
+#X obj 378 498 line~;
+#X msg 378 471 \$1 5;
+#X msg 100 159 device LPM_MK3;
+#X text 491 444 <<< Velocity value is scaled to 0 - 1 to provide an
+argument for *~ suitable for amplitude. A short ramp is added to signal-rate
+values using 'line~' to create a smooth transition between values.
+** LPM users \, these values velocity will either be full or off **
+, f 41;
+#X obj 11 10 declare -path r_cycle;
+#X msg 100 99 device LP_Pro_MK3;
+#N canvas 1 78 486 150 MISC 0;
+#X text 32 25 This is needed to make the r_cycle objects accessible
+even before placing the r_cycle folder in a place part of the path
+search in Pd \;;
+#X obj 34 87 declare -path ../;
+#X restore 16 613 pd MISC;
+#X text 24 699 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 55 821 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 25 729 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 25 786 You may obtain a copy of the License at;
+#X text 25 851 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 25 907 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;
+#X connect 7 0 9 0;
+#X connect 8 0 14 0;
+#X connect 9 0 57 0;
+#X connect 10 0 19 0;
+#X connect 11 0 16 0;
+#X connect 11 0 16 1;
+#X connect 12 0 11 1;
+#X connect 13 0 12 0;
+#X connect 14 0 13 0;
+#X connect 17 0 21 0;
+#X connect 17 0 24 0;
+#X connect 18 0 20 0;
+#X connect 19 0 11 0;
+#X connect 20 0 11 0;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 23 0 27 0;
+#X connect 24 0 25 0;
+#X connect 25 0 20 1;
+#X connect 26 0 19 1;
+#X connect 27 0 26 0;
+#X connect 28 0 41 0;
+#X connect 29 0 32 0;
+#X connect 31 0 30 0;
+#X connect 32 0 31 0;
+#X connect 33 1 17 0;
+#X connect 34 1 29 0;
+#X connect 36 0 37 0;
+#X connect 37 0 17 0;
+#X connect 41 0 6 0;
+#X connect 41 1 6 1;
+#X connect 55 0 10 0;
+#X connect 56 0 55 0;
+#X connect 57 0 56 0;
+#X connect 57 1 59 0;
+#X connect 58 0 18 0;
+#X connect 59 0 58 0;
+#X connect 60 0 1 0;
+#X connect 63 0 1 0;
+#X coords 0 0 1 1 85 60 0;

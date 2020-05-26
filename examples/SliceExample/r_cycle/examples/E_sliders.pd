@@ -1,0 +1,67 @@
+#N canvas 135 84 1066 744 12;
+#X declare -path r_cycle;
+#X declare -path ../;
+#X obj 28 19 declare -path r_cycle;
+#X obj 28 92 LP_GUI -1;
+#X obj 342 303 RADIO 11 8 120 24 1 -1;
+#X floatatom 342 328 5 0 0 1 abs_value_(0-1) - -;
+#X floatatom 352 348 5 0 0 1 index - -;
+#X floatatom 362 368 5 0 0 1 status - -;
+#X floatatom 372 388 5 0 0 1 aftertouch - -;
+#X floatatom 381 443 5 0 0 1 note - -;
+#X obj 381 417 unpack;
+#X floatatom 420 463 5 0 0 1 polytouch - -;
+#X floatatom 552 328 5 0 0 1 abs_value_(0-1) - -;
+#X floatatom 562 348 5 0 0 1 index - -;
+#X floatatom 572 368 5 0 0 1 status - -;
+#X floatatom 582 388 5 0 0 1 aftertouch - -;
+#X floatatom 591 443 5 0 0 1 note - -;
+#X obj 591 417 unpack;
+#X floatatom 630 463 5 0 0 1 polytouch - -;
+#X text 577 273 horizontal slider;
+#X text 357 273 vertical slider;
+#X obj 552 303 RADIO 34 5 120 37 0 -1;
+#X obj 28 45 DEVICE_SELECT;
+#X text 271 69 LP_GUI;
+#X text 389 52 HOW TO \; --- \; - make sure no other [LP_GUI] is active
+(ie in a different patch) \; - select the right MIDI ports \; - click
+on the device 'device' and pick your LP model \; - turn on LP_GUI \;
+- use LP to control the sliders and check the Pd objects \;;
+#X text 755 284 RADIO ARGS \; 1: elem_id (pad no.) \; 2: length \;
+3: on color \; 4: off color \; 5: orientation (horiz (0)/vert (1))
+\; 6: LP_GUI_id \; RADIO METHODS \; - None \; RADIO OUTLETS \; 1: abs
+value (0-1) \; 2: index \; 3: status \; 4: aftertouch \; 5: polytouch
+\;;
+#N canvas 1 78 486 150 MISC 0;
+#X text 32 25 This is needed to make the r_cycle objects accessible
+even before placing the r_cycle folder in a place part of the path
+search in Pd \;;
+#X obj 34 87 declare -path ../;
+#X restore 27 487 pd MISC;
+#X text 26 544 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 57 666 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 27 574 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 27 631 You may obtain a copy of the License at;
+#X text 27 696 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 27 756 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 2 2 5 0;
+#X connect 2 3 6 0;
+#X connect 2 4 8 0;
+#X connect 8 0 7 0;
+#X connect 8 1 9 0;
+#X connect 15 0 14 0;
+#X connect 15 1 16 0;
+#X connect 19 0 10 0;
+#X connect 19 1 11 0;
+#X connect 19 2 12 0;
+#X connect 19 3 13 0;
+#X connect 19 4 15 0;

@@ -1,0 +1,114 @@
+#N canvas 13 176 1246 518 10;
+#X obj 298 44 inlet~;
+#X obj 298 105 delwrite~ \$0_del 1000;
+#X obj 298 74 +~;
+#X obj 410 137 *~;
+#X obj 308 297 outlet~;
+#X obj 498 45 inlet;
+#X obj 498 87 min 1000;
+#X obj 498 108 max 0;
+#X obj 498 210 line~;
+#X obj 308 166 delread4~ \$0_del;
+#X obj 558 108 max 0;
+#X msg 558 189 \$1 5;
+#X obj 558 210 line~;
+#X obj 558 87 min 1;
+#X obj 137 102 hsl 128 15 0 1000 0 0 empty empty time_(msec) 5 8 0
+10 -261682 -1 -1 0 0;
+#X floatatom 102 102 5 0 0 0 - - -;
+#X obj 137 122 hsl 128 15 0 1 0 0 empty empty feedback 5 8 0 10 -204800
+-1 -1 0 0;
+#X floatatom 102 122 5 0 0 0 - - -;
+#X msg 498 189 \$1 150;
+#X obj 498 159 t f f;
+#X obj 558 159 t f f;
+#X msg 192 60 set \$1;
+#X msg 134 61 set \$1;
+#X obj 308 261 *~;
+#X obj 348 261 *~;
+#X msg 603 190 \$1 5;
+#X obj 603 211 line~;
+#X obj 591 241 sig~ 1;
+#X obj 591 262 -~;
+#X obj 604 88 min 1;
+#X obj 604 109 max 0;
+#X obj 137 142 hsl 128 15 0 1 0 0 empty empty dry_wet 5 8 0 10 -204786
+-1 -1 0 0;
+#X floatatom 102 142 5 0 0 0 - - -;
+#X msg 242 60 set \$1;
+#X obj 604 159 t f f;
+#X obj 498 66 route time feedback dry_wet print_methods print_outlets
+;
+#X obj 694 89 s \$0_print_methods;
+#X obj 759 114 s \$0_print_outlets;
+#X obj 909 30 r \$0_print_methods;
+#X obj 926 82 r \$0_print_outlets;
+#X msg 926 103 TAPE_DELAY OUTLETS \, 1: audio out;
+#X obj 909 135 print -n;
+#X msg 909 51 TAPE_DELAY METHODS \, time \, feedback \, dry_wet \;
+;
+#X text 753 233 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 784 355 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 754 263 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 754 320 You may obtain a copy of the License at;
+#X text 754 385 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 754 441 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 2 0;
+#X connect 0 0 24 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X connect 5 0 35 0;
+#X connect 6 0 7 0;
+#X connect 7 0 19 0;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;
+#X connect 9 0 23 0;
+#X connect 10 0 20 0;
+#X connect 11 0 12 0;
+#X connect 12 0 3 1;
+#X connect 13 0 10 0;
+#X connect 14 0 15 0;
+#X connect 15 0 19 0;
+#X connect 16 0 17 0;
+#X connect 17 0 20 0;
+#X connect 18 0 8 0;
+#X connect 19 0 22 0;
+#X connect 19 1 18 0;
+#X connect 20 0 21 0;
+#X connect 20 1 11 0;
+#X connect 21 0 16 0;
+#X connect 21 0 17 0;
+#X connect 22 0 14 0;
+#X connect 22 0 15 0;
+#X connect 23 0 4 0;
+#X connect 24 0 4 0;
+#X connect 25 0 26 0;
+#X connect 26 0 23 1;
+#X connect 26 0 28 1;
+#X connect 27 0 28 0;
+#X connect 28 0 24 1;
+#X connect 29 0 30 0;
+#X connect 30 0 34 0;
+#X connect 31 0 32 0;
+#X connect 32 0 34 0;
+#X connect 33 0 32 0;
+#X connect 33 0 31 0;
+#X connect 34 0 33 0;
+#X connect 34 1 25 0;
+#X connect 35 0 6 0;
+#X connect 35 1 13 0;
+#X connect 35 2 29 0;
+#X connect 35 3 36 0;
+#X connect 35 4 37 0;
+#X connect 38 0 42 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X connect 42 0 41 0;
+#X coords 0 -1 1 1 170 60 2 100 100;

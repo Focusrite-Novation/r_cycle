@@ -1,0 +1,1767 @@
+#N canvas 0 35 1280 743 10;
+#X obj 10 11 cnv 15 290 390 \$0_from_g_main_cnv \$0_to_g_main_cnv LAUNCHPAD_GUI_ID_0
+8 12 0 12 -128992 -33289 0;
+#X obj 39 270 tgl 20 0 empty \$0_elem_11 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 69 270 tgl 20 0 empty \$0_elem_12 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 99 270 tgl 20 0 empty \$0_elem_13 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 129 270 tgl 20 0 empty \$0_elem_14 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 159 270 tgl 20 0 empty \$0_elem_15 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 189 270 tgl 20 0 empty \$0_elem_16 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 219 270 tgl 20 0 empty \$0_elem_17 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 249 270 tgl 20 0 empty \$0_elem_18 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 39 240 tgl 20 0 empty \$0_elem_21 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 69 240 tgl 20 0 empty \$0_elem_22 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 99 240 tgl 20 0 empty \$0_elem_23 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 129 240 tgl 20 0 empty \$0_elem_24 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 159 240 tgl 20 0 empty \$0_elem_25 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 189 240 tgl 20 0 empty \$0_elem_26 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 219 240 tgl 20 0 empty \$0_elem_27 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 249 240 tgl 20 0 empty \$0_elem_28 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 39 210 tgl 20 0 empty \$0_elem_31 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 69 210 tgl 20 0 empty \$0_elem_32 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 99 210 tgl 20 0 empty \$0_elem_33 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 129 210 tgl 20 0 empty \$0_elem_34 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 159 210 tgl 20 0 empty \$0_elem_35 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 189 210 tgl 20 0 empty \$0_elem_36 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 219 210 tgl 20 0 empty \$0_elem_37 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 249 210 tgl 20 0 empty \$0_elem_38 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 39 180 tgl 20 0 empty \$0_elem_41 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 69 180 tgl 20 0 empty \$0_elem_42 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 99 180 tgl 20 0 empty \$0_elem_43 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 129 180 tgl 20 0 empty \$0_elem_44 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 159 180 tgl 20 0 empty \$0_elem_45 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 189 180 tgl 20 0 empty \$0_elem_46 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 219 180 tgl 20 0 empty \$0_elem_47 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 249 180 tgl 20 0 empty \$0_elem_48 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 39 150 tgl 20 0 empty \$0_elem_51 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 69 150 tgl 20 0 empty \$0_elem_52 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 99 150 tgl 20 0 empty \$0_elem_53 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 129 150 tgl 20 0 empty \$0_elem_54 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 159 150 tgl 20 0 empty \$0_elem_55 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 189 150 tgl 20 0 empty \$0_elem_56 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 219 150 tgl 20 0 empty \$0_elem_57 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 249 150 tgl 20 0 empty \$0_elem_58 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 39 120 tgl 20 0 empty \$0_elem_61 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 69 120 tgl 20 0 empty \$0_elem_62 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 99 120 tgl 20 0 empty \$0_elem_63 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 129 120 tgl 20 0 empty \$0_elem_64 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 159 120 tgl 20 0 empty \$0_elem_65 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 189 120 tgl 20 0 empty \$0_elem_66 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 219 120 tgl 20 0 empty \$0_elem_67 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 249 120 tgl 20 0 empty \$0_elem_68 empty 17 7 0 10 -1 -1 -1
+0 1;
+#X obj 39 90 tgl 20 0 empty \$0_elem_71 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 69 90 tgl 20 0 empty \$0_elem_72 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 99 90 tgl 20 0 empty \$0_elem_73 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 129 90 tgl 20 0 empty \$0_elem_74 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 159 90 tgl 20 0 empty \$0_elem_75 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 189 90 tgl 20 0 empty \$0_elem_76 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 219 90 tgl 20 0 empty \$0_elem_77 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 249 90 tgl 20 0 empty \$0_elem_78 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 39 60 tgl 20 0 empty \$0_elem_81 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 69 60 tgl 20 0 empty \$0_elem_82 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 99 60 tgl 20 0 empty \$0_elem_83 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 129 60 tgl 20 0 empty \$0_elem_84 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 159 60 tgl 20 0 empty \$0_elem_85 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 189 60 tgl 20 0 empty \$0_elem_86 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 219 60 tgl 20 0 empty \$0_elem_87 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 249 60 tgl 20 0 empty \$0_elem_88 empty 17 7 0 10 -1 -1 -1 0
+1;
+#X obj 41 317 tgl 15 0 empty \$0_elem_1 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 373 7 inlet;
+#X obj 71 317 tgl 15 0 empty \$0_elem_2 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 101 317 tgl 15 0 empty \$0_elem_3 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 131 317 tgl 15 0 empty \$0_elem_4 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 161 317 tgl 15 0 empty \$0_elem_5 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 191 317 tgl 15 0 empty \$0_elem_6 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 221 317 tgl 15 0 empty \$0_elem_7 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 251 317 tgl 15 0 empty \$0_elem_8 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 41 37 tgl 15 0 empty \$0_elem_91 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 71 37 tgl 15 0 empty \$0_elem_92 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 101 37 tgl 15 0 empty \$0_elem_93 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 131 37 tgl 15 0 empty \$0_elem_94 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 161 37 tgl 15 0 empty \$0_elem_95 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 191 37 tgl 15 0 empty \$0_elem_96 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 221 37 tgl 15 0 empty \$0_elem_97 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 251 37 tgl 15 0 empty \$0_elem_98 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 14 273 tgl 15 0 empty \$0_elem_10 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 14 243 tgl 15 0 empty \$0_elem_20 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 14 213 tgl 15 0 empty \$0_elem_30 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 14 183 tgl 15 0 empty \$0_elem_40 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 14 153 tgl 15 0 empty \$0_elem_50 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 14 123 tgl 15 0 empty \$0_elem_60 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 14 93 tgl 15 0 empty \$0_elem_70 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 14 63 tgl 15 0 empty \$0_elem_80 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 280 273 tgl 15 0 empty \$0_elem_19 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 280 243 tgl 15 0 empty \$0_elem_29 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 280 213 tgl 15 0 empty \$0_elem_39 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 280 183 tgl 15 0 empty \$0_elem_49 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 280 153 tgl 15 0 empty \$0_elem_59 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 280 123 tgl 15 0 empty \$0_elem_69 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 280 93 tgl 15 0 empty \$0_elem_79 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 280 63 tgl 15 0 empty \$0_elem_89 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X text 46 440 values per pad/button \; \; 1 status (0 or !=0) \; 2
+color (0-127) \;;
+#X msg 999 37 reset;
+#X obj 936 10 loadbang;
+#X obj 451 268 s \$0_reset;
+#X obj 475 291 s \$0_play;
+#X obj 106 621 text define \$0_BUFFER;
+#X msg 106 599 clear;
+#X msg 105 650 clear;
+#X obj 105 671 text define \$0_OBJECTS;
+#N canvas 0 23 499 540 INFO 0;
+#X text 21 61 This patch (at the moment) uses 3 'buffers' \; \; 1 \$0_LAYOUT
+(array): used to store status (element pressed or not) and color of
+pads \; 2 \$0_OBJECTS (text): contains all object unique ids and the
+object status (status in the heartbeat context - see below) \; 3 \$0_BUFFER
+(text): contains all 'elements' of every objects \; \; A heartbeat
+checks that all the objects still extist \; otherwise deletes the data
+related to them and refreshes \; the GUI \; \; --------- \; HEARTBEAT
+\; --------- \; All the objects \, when created send their unique ID
+to LP_GUI that stores them in \$0_OBJECTS \; Every 'n' millisecond
+the following check happens \; 1 LP_GUI ask for objects attributes
+in case new objects have been created \; 2 the status (0-1) of the
+objects in \$0_OBJECTS is set to zero \; 3 new object IDs are added
+to the pool \; 4 a heartbeat is sent to all the objects created \;
+5 the existing objects reply to LP_GUI that then sets the object status
+in \$0_OBJECTS back to 1 \; 6 \$0_OBJECTS is inspected and all the
+objects with their status set to 0 are deleted \;;
+#X restore 939 393 pd INFO;
+#X obj 46 575 r \$0_reset;
+#X obj 936 118 s \$0_heartbeat_off_on;
+#X obj 999 58 s \$0_reset;
+#X msg 182 597 click;
+#N canvas 247 30 805 572 LIVE_INTERACTION 0;
+#X obj 154 201 != 0;
+#X obj 154 286 f;
+#X obj 154 222 t b f;
+#X obj 50 261 != 0;
+#X obj 29 283 pack;
+#X obj 29 493 s;
+#X obj 54 462 makefilename \$0_elem_%d;
+#X obj 44 398 != 0;
+#X obj 29 426 f;
+#X obj 29 344 unpack;
+#X obj 517 170 unpack;
+#X obj 29 312 t l l;
+#X obj 517 218 moses;
+#X obj 517 263 unpack s 0 0;
+#X text 75 342 elem_id \, status \;;
+#X obj 517 409 s;
+#X obj 517 340 list store;
+#X obj 532 374 makefilename to_%s;
+#X obj 517 196 text search \$0_BUFFER 1;
+#X obj 517 242 text get \$0_BUFFER;
+#X obj 551 289 pack 0 0 0;
+#X text 319 40 LP_GUI receives MIDI from HW \, route it to the right
+object that does the 'processing' and reply to LP_GUI that sends MIDI
+to HW;
+#X text 545 411 to objects \;;
+#X text 60 490 update LP_GUI gui \;;
+#X obj 81 213 t f f;
+#X msg 248 343 velocity \$1;
+#X obj 248 318 f;
+#X obj 29 370 t b f;
+#X obj 517 318 t b b s;
+#X obj 29 212 t f f;
+#N canvas 0 23 610 443 POLYTOUCH_CHECK 0;
+#X msg 158 183 polytouch \$1 \$2;
+#X obj 218 116 text search \$0_BUFFER 1;
+#X obj 218 138 moses;
+#X obj 158 72 t a a;
+#X obj 185 93 unpack;
+#X obj 218 161 text get \$0_BUFFER;
+#X obj 218 249 list;
+#X obj 218 270 t l b;
+#X msg 263 270 obj_-1;
+#X obj 218 294 list split 3;
+#X obj 218 315 list trim;
+#X obj 158 42 inlet;
+#X obj 218 363 outlet;
+#X obj 278 363 outlet;
+#X text 315 265 fake obj name needed to avoid \; sending polytouch
+when pressed \; pad is not part of any object \;;
+#X text 396 42 route 'polytouch' to \; the right object \; treated
+indipendently \; cause it's a continuous \; message \;;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 2 1 5 0;
+#X connect 3 0 0 0;
+#X connect 3 1 4 0;
+#X connect 4 1 1 0;
+#X connect 5 0 6 1;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 7 1 8 0;
+#X connect 8 0 6 1;
+#X connect 9 0 10 0;
+#X connect 9 1 13 0;
+#X connect 10 0 12 0;
+#X connect 11 0 3 0;
+#X restore 261 206 pd POLYTOUCH_CHECK;
+#X obj 29 160 r \$0_m_note;
+#X obj 261 181 r \$0_m_polyt;
+#X obj 328 291 r \$0_m_touch;
+#X obj 154 181 r \$0_m_cc_value;
+#X obj 169 261 r \$0_m_cc_nr;
+#X text 578 163 send 'elem_id' \, 'color' and \; 'status' to the right
+obj \;;
+#N canvas 0 23 1280 406 FROM_LPs 0;
+#X text 141 195 MIDI input;
+#X obj 21 196 FROM_LP_X, f 17;
+#X obj 21 58 r \$0_device;
+#X obj 21 79 sel LP_X;
+#X msg 21 100 1;
+#X msg 51 100 0;
+#X obj 21 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 271 58 r \$0_device;
+#X msg 271 100 1;
+#X msg 301 100 0;
+#X obj 271 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 148 8 loadbang;
+#X obj 271 79 sel LP_Pro;
+#X obj 271 191 FROM_LPP, f 25;
+#X obj 58 220 s \$0_m_note;
+#X obj 70 240 s \$0_m_vel;
+#X obj 82 260 s \$0_m_polyt;
+#X obj 95 280 s \$0_m_touch;
+#X obj 107 299 s \$0_m_cc_value;
+#X obj 120 320 s \$0_m_cc_nr;
+#X obj 326 220 s \$0_m_note;
+#X obj 338 240 s \$0_m_vel;
+#X obj 350 260 s \$0_m_polyt;
+#X obj 363 280 s \$0_m_touch;
+#X obj 375 299 s \$0_m_cc_value;
+#X obj 388 320 s \$0_m_cc_nr;
+#X obj 354 93 r \$0_status;
+#X obj 354 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 21 158 f;
+#X obj 271 156 f;
+#X obj 354 134 sel 0 1;
+#X msg 354 155 0;
+#X obj 104 93 r \$0_status;
+#X obj 104 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 104 134 sel 0 1;
+#X msg 104 155 0;
+#X obj 521 58 r \$0_device;
+#X msg 521 100 1;
+#X msg 551 100 0;
+#X obj 521 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 576 220 s \$0_m_note;
+#X obj 588 240 s \$0_m_vel;
+#X obj 625 259 s \$0_m_cc_value;
+#X obj 638 280 s \$0_m_cc_nr;
+#X obj 604 93 r \$0_status;
+#X obj 604 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 521 156 f;
+#X obj 604 134 sel 0 1;
+#X msg 604 155 0;
+#X obj 521 79 sel LPM_MK3;
+#X obj 521 191 FROM_LPM_MK3, f 25;
+#X obj 761 58 r \$0_device;
+#X msg 761 100 1;
+#X msg 791 100 0;
+#X obj 761 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 816 220 s \$0_m_note;
+#X obj 828 240 s \$0_m_vel;
+#X obj 840 260 s \$0_m_polyt;
+#X obj 853 280 s \$0_m_touch;
+#X obj 865 299 s \$0_m_cc_value;
+#X obj 878 320 s \$0_m_cc_nr;
+#X obj 854 93 r \$0_status;
+#X obj 854 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 761 156 f;
+#X obj 854 134 sel 0 1;
+#X msg 854 155 0;
+#X obj 761 191 FROM_LPP3, f 25;
+#X obj 761 79 sel LP_Pro_MK3;
+#X text 219 5 LP X \; ON by default \;;
+#X obj 1001 58 r \$0_device;
+#X msg 1001 100 1;
+#X msg 1031 100 0;
+#X obj 1001 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1056 220 s \$0_m_note;
+#X obj 1068 240 s \$0_m_vel;
+#X obj 1080 260 s \$0_m_polyt;
+#X obj 1093 280 s \$0_m_touch;
+#X obj 1105 299 s \$0_m_cc_value;
+#X obj 1118 320 s \$0_m_cc_nr;
+#X obj 1084 93 r \$0_status;
+#X obj 1084 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1001 156 f;
+#X obj 1084 134 sel 0 1;
+#X msg 1084 155 0;
+#X obj 1001 79 sel LP2;
+#X obj 1001 191 FROM_LP2, f 25;
+#X connect 1 3 14 0;
+#X connect 1 4 15 0;
+#X connect 1 5 16 0;
+#X connect 1 6 17 0;
+#X connect 1 7 18 0;
+#X connect 1 8 19 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 28 0;
+#X connect 7 0 12 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 0;
+#X connect 10 0 29 0;
+#X connect 11 0 4 0;
+#X connect 12 0 8 0;
+#X connect 12 1 9 0;
+#X connect 13 3 20 0;
+#X connect 13 4 21 0;
+#X connect 13 5 22 0;
+#X connect 13 6 23 0;
+#X connect 13 7 24 0;
+#X connect 13 8 25 0;
+#X connect 26 0 27 0;
+#X connect 27 0 30 0;
+#X connect 28 0 1 0;
+#X connect 29 0 13 0;
+#X connect 30 0 31 0;
+#X connect 30 1 29 0;
+#X connect 31 0 13 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 34 1 28 0;
+#X connect 35 0 1 0;
+#X connect 36 0 49 0;
+#X connect 37 0 39 0;
+#X connect 38 0 39 0;
+#X connect 39 0 46 0;
+#X connect 44 0 45 0;
+#X connect 45 0 47 0;
+#X connect 46 0 50 0;
+#X connect 47 0 48 0;
+#X connect 47 1 46 0;
+#X connect 48 0 50 0;
+#X connect 49 0 37 0;
+#X connect 49 1 38 0;
+#X connect 50 3 40 0;
+#X connect 50 4 41 0;
+#X connect 50 5 42 0;
+#X connect 50 6 43 0;
+#X connect 51 0 67 0;
+#X connect 52 0 54 0;
+#X connect 53 0 54 0;
+#X connect 54 0 63 0;
+#X connect 61 0 62 0;
+#X connect 62 0 64 0;
+#X connect 63 0 66 0;
+#X connect 64 0 65 0;
+#X connect 64 1 63 0;
+#X connect 65 0 66 0;
+#X connect 66 3 55 0;
+#X connect 66 4 56 0;
+#X connect 66 5 57 0;
+#X connect 66 6 58 0;
+#X connect 66 7 59 0;
+#X connect 66 8 60 0;
+#X connect 67 0 52 0;
+#X connect 67 1 53 0;
+#X connect 69 0 84 0;
+#X connect 70 0 72 0;
+#X connect 71 0 72 0;
+#X connect 72 0 81 0;
+#X connect 79 0 80 0;
+#X connect 80 0 82 0;
+#X connect 81 0 85 0;
+#X connect 82 0 83 0;
+#X connect 82 1 81 0;
+#X connect 83 0 85 0;
+#X connect 84 0 70 0;
+#X connect 84 1 71 0;
+#X connect 85 3 73 0;
+#X connect 85 4 74 0;
+#X connect 85 5 75 0;
+#X connect 85 6 76 0;
+#X connect 85 7 77 0;
+#X connect 85 8 78 0;
+#X restore 34 43 pd FROM_LPs;
+#X text 109 43 all FROM_XX obj in here \;;
+#X obj 81 180 r \$0_m_vel;
+#N canvas 0 23 1128 587 TO_LPs 0;
+#X text 464 467 MIDI output;
+#X obj 438 401 unpack;
+#X text 434 86 from objects \;;
+#X obj 438 109 r \$1_MIDI_to_LP_GUI;
+#X obj 438 169 spigot;
+#X obj 471 129 r \$0_status;
+#X obj 471 150 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 438 434 TO_LP_X;
+#X obj 658 401 unpack;
+#X obj 438 370 spigot;
+#X obj 658 370 spigot 1;
+#X msg 703 300 1;
+#X msg 733 300 0;
+#X obj 703 351 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 703 279 sel LP_Pro;
+#X msg 471 300 1;
+#X msg 501 300 0;
+#X obj 471 351 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 471 279 sel LP_X;
+#X obj 213 200 r \$0_daw_mode;
+#X msg 213 221 daw_mode \$1;
+#X obj 73 200 r \$0_programmer_mode;
+#X msg 73 221 programmer_mode \$1;
+#X text 479 200 activate programmer_mode \;;
+#X obj 37 187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 658 434 TO_LPP;
+#X obj 318 401 unpack;
+#X obj 318 370 spigot;
+#X obj 351 188 r \$0_device;
+#X msg 351 300 1;
+#X msg 381 300 0;
+#X obj 351 351 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 351 279 sel LPM_MK3;
+#X obj 318 434 TO_LPM_MK3;
+#X text 73 168 new LPs needs \; prog mode ON \;;
+#X msg 225 143 1;
+#X msg 255 143 0;
+#X obj 548 401 unpack;
+#X obj 548 370 spigot;
+#X msg 581 300 1;
+#X msg 611 300 0;
+#X obj 581 351 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 548 434 TO_LPP3;
+#X obj 581 279 sel LP_Pro_MK3;
+#X obj 225 92 sel LPM_MK3 LP_X LP_Pro_MK3;
+#X text 230 59 when new LPs turn \; programmer mode ON \;;
+#X obj 778 401 unpack;
+#X text 832 400 elem_id \, color \;;
+#X obj 778 370 spigot 1;
+#X msg 823 300 1;
+#X msg 853 300 0;
+#X obj 823 351 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 778 434 TO_LP2;
+#X obj 823 279 sel LP2;
+#X obj 351 213 t a a a a a a;
+#X connect 1 0 7 0;
+#X connect 1 1 7 1;
+#X connect 3 0 4 0;
+#X connect 4 0 9 0;
+#X connect 4 0 10 0;
+#X connect 4 0 27 0;
+#X connect 4 0 38 0;
+#X connect 4 0 48 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 1;
+#X connect 8 0 25 0;
+#X connect 8 1 25 1;
+#X connect 9 0 1 0;
+#X connect 10 0 8 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 0;
+#X connect 13 0 10 1;
+#X connect 14 0 11 0;
+#X connect 14 1 12 0;
+#X connect 15 0 17 0;
+#X connect 16 0 17 0;
+#X connect 17 0 9 1;
+#X connect 18 0 15 0;
+#X connect 18 1 16 0;
+#X connect 19 0 20 0;
+#X connect 20 0 33 0;
+#X connect 20 0 7 0;
+#X connect 20 0 42 0;
+#X connect 21 0 22 0;
+#X connect 22 0 33 0;
+#X connect 22 0 7 0;
+#X connect 22 0 42 0;
+#X connect 24 0 22 0;
+#X connect 26 0 33 0;
+#X connect 26 1 33 1;
+#X connect 27 0 26 0;
+#X connect 28 0 54 0;
+#X connect 29 0 31 0;
+#X connect 30 0 31 0;
+#X connect 31 0 27 1;
+#X connect 32 0 29 0;
+#X connect 32 1 30 0;
+#X connect 35 0 22 0;
+#X connect 36 0 22 0;
+#X connect 37 0 42 0;
+#X connect 37 1 42 1;
+#X connect 38 0 37 0;
+#X connect 39 0 41 0;
+#X connect 40 0 41 0;
+#X connect 41 0 38 1;
+#X connect 43 0 39 0;
+#X connect 43 1 40 0;
+#X connect 44 0 35 0;
+#X connect 44 1 35 0;
+#X connect 44 2 35 0;
+#X connect 44 3 36 0;
+#X connect 46 0 52 0;
+#X connect 46 1 52 1;
+#X connect 48 0 46 0;
+#X connect 49 0 51 0;
+#X connect 50 0 51 0;
+#X connect 51 0 48 1;
+#X connect 53 0 49 0;
+#X connect 53 1 50 0;
+#X connect 54 0 44 0;
+#X connect 54 1 32 0;
+#X connect 54 2 18 0;
+#X connect 54 3 43 0;
+#X connect 54 4 14 0;
+#X connect 54 5 53 0;
+#X restore 34 73 pd TO_LPs;
+#X text 97 73 all TO_XX obj in here \;;
+#X msg 328 343 aftertouch \$1;
+#X obj 338 398 s _aftertouch;
+#X connect 0 0 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 2 1 4 1;
+#X connect 3 0 4 1;
+#X connect 4 0 11 0;
+#X connect 6 0 5 1;
+#X connect 7 0 8 1;
+#X connect 8 0 5 0;
+#X connect 9 0 27 0;
+#X connect 9 1 7 0;
+#X connect 10 0 18 0;
+#X connect 10 1 20 2;
+#X connect 11 0 9 0;
+#X connect 11 1 10 0;
+#X connect 12 1 19 0;
+#X connect 13 0 28 0;
+#X connect 13 1 20 0;
+#X connect 13 2 20 1;
+#X connect 16 0 15 0;
+#X connect 17 0 15 1;
+#X connect 18 0 12 0;
+#X connect 19 0 13 0;
+#X connect 20 0 16 1;
+#X connect 24 0 3 0;
+#X connect 24 1 26 1;
+#X connect 25 0 15 0;
+#X connect 26 0 25 0;
+#X connect 27 0 8 0;
+#X connect 27 1 6 0;
+#X connect 28 0 16 0;
+#X connect 28 1 26 0;
+#X connect 28 2 17 0;
+#X connect 29 0 4 0;
+#X connect 30 0 15 0;
+#X connect 30 1 17 0;
+#X connect 31 0 29 0;
+#X connect 32 0 30 0;
+#X connect 33 0 42 0;
+#X connect 33 0 43 0;
+#X connect 34 0 0 0;
+#X connect 35 0 1 1;
+#X connect 39 0 24 0;
+#X restore 939 373 pd LIVE_INTERACTION;
+#X obj 424 221 t b b;
+#X obj 424 243 s \$0_refresh_status;
+#N canvas 288 412 759 315 UTILS 0;
+#X obj 34 144 text define \$0_README;
+#X obj 34 26 loadbang;
+#X text 106 31 load README.md \;;
+#N canvas 288 138 444 350 PRINT_OBJECTS 0;
+#X obj 45 37 r \$0_print_objects;
+#X obj 45 209 text get \$0_README;
+#X obj 45 138 until;
+#X obj 45 159 f 0;
+#X obj 45 180 t f f;
+#X obj 85 180 + 1;
+#X msg 90 156 0;
+#X obj 45 110 t f b;
+#X obj 25 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 45 89 text size \$0_README;
+#X obj 45 230 list trim;
+#X obj 45 251 route -;
+#X obj 45 272 route _doc_;
+#X obj 45 293 print -n;
+#X text 190 70 in README.md looks for rows that \; start with '- _doc_'
+\;;
+#X connect 0 0 9 0;
+#X connect 1 0 10 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 4 1 5 0;
+#X connect 5 0 3 1;
+#X connect 6 0 3 1;
+#X connect 7 0 2 0;
+#X connect 7 1 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X restore 34 194 pd PRINT_OBJECTS;
+#X obj 307 36 r \$0_print_args;
+#X obj 307 145 print -n;
+#X msg 307 56 LP_GUI ARGS \, 1: object unique ID (LP_GUI_id) \;;
+#X obj 324 82 r \$0_print_methods;
+#X msg 324 103 LP_GUI METHODS \, reset \, play \, status \, device
+\, daw_mode \, programmer_mode \;;
+#X msg 34 121 read -c README.md;
+#X obj 407 191 r \$0_from_g_select_device;
+#X msg 407 212 vis 1;
+#X obj 407 233 s pd-SELECT_DEVICE;
+#X connect 1 0 9 0;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 0 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X restore 939 412 pd UTILS;
+#X obj 104 723 text define \$0_ABSORBER;
+#X msg 104 700 clear;
+#X obj 152 700 r \$0_reset_absorber;
+#X msg 222 478 const 0 \;;
+#X obj 222 499 s \$0_LAYOUT;
+#X obj 222 453 r \$0_reset;
+#X obj 15 374 PRINT_2;
+#X floatatom 629 210 5 0 0 0 - - -;
+#X obj 700 259 s \$0_refresh_status;
+#X obj 668 280 s \$0_status;
+#X msg 936 64 1;
+#X obj 689 230 sel 1;
+#X obj 732 237 s \$0_device;
+#X obj 732 217 symbol;
+#X obj 783 191 s \$0_daw_mode;
+#X obj 783 211 s \$0_programmer_mode;
+#N canvas 0 23 450 300 GUI_PRINT 0;
+#X obj 36 105 r \$0_inner_print;
+#X obj 36 134 t b a;
+#X obj 36 155 del 2500;
+#X msg 36 176 clean;
+#X obj 36 197 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X restore 15 498 pd GUI_PRINT;
+#X obj 578 189 s \$0_open_buffers;
+#X obj 182 572 r \$0_open_buffers;
+#X obj 526 315 s \$0_HB_off;
+#X obj 999 76 r \$0_HB_off;
+#X msg 999 97 0;
+#X obj 373 196 s \$0_set;
+#N canvas 0 23 1081 559 PROCESSING 0;
+#X obj 116 498 s;
+#X obj 116 344 t b b;
+#X obj 163 393 f;
+#X msg 163 431 color \$1;
+#X obj 135 467 makefilename \$0_elem_%d;
+#X obj 189 185 COLORS_NO_GUI;
+#X obj 131 393 != 0;
+#X obj 116 431 f;
+#X obj 150 159 moses 0;
+#X obj 116 312 spigot;
+#X obj 116 211 t b f f;
+#X obj 149 262 r \$0_elem_color;
+#X obj 149 283 == 0;
+#X text 197 158 ignore color<0 \;;
+#X obj 116 127 unpack 0 0 0;
+#X obj 155 233 s \$0_get_from_array;
+#X text 153 490 1 pad id \; 2 color \; 3 status \;;
+#N canvas 0 23 450 300 RESET 0;
+#X obj 86 79 t f b;
+#X obj 86 100 until;
+#X obj 86 121 f 0;
+#X obj 86 142 t f f;
+#X obj 126 142 + 1;
+#X msg 133 100 0;
+#X obj 86 184 unpack 0 0 0;
+#X msg 86 163 \$1 0 0;
+#X obj 86 34 r \$0_reset;
+#X obj 86 226 outlet;
+#X obj 136 226 outlet;
+#X obj 186 226 outlet;
+#X msg 86 58 109;
+#X connect 0 0 1 0;
+#X connect 0 1 5 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 7 0;
+#X connect 3 1 4 0;
+#X connect 4 0 2 1;
+#X connect 5 0 2 1;
+#X connect 6 0 9 0;
+#X connect 6 1 10 0;
+#X connect 6 2 11 0;
+#X connect 7 0 6 0;
+#X connect 8 0 12 0;
+#X connect 12 0 0 0;
+#X restore 130 48 pd RESET;
+#X obj 116 88 r \$0_set;
+#X obj 570 248 unpack 0 0 0;
+#X obj 570 458 list store;
+#X obj 347 352 * 2;
+#X obj 347 373 t f b;
+#X msg 402 373 2;
+#X obj 347 423 unpack;
+#X obj 625 485 * 2;
+#X obj 604 271 moses 0;
+#X obj 570 427 t b f f;
+#X msg 681 330 0;
+#X obj 648 354 spigot;
+#X msg 648 330 1;
+#X obj 648 378 * 2;
+#X text 724 331 if color<0 reuse same color \;;
+#X obj 347 401 array get \$0_LAYOUT;
+#X obj 570 515 array set \$0_LAYOUT;
+#X obj 648 403 tabread \$0_LAYOUT;
+#X obj 347 448 s \$0_elem_color;
+#X obj 689 101 t l l;
+#X obj 615 101 s \$0_reset;
+#X obj 347 324 r \$0_get_from_array;
+#X obj 570 186 t l l;
+#X text 655 237 1 id \; 2 col \; 3 status \;;
+#X obj 643 299 t f b;
+#X obj 627 427 pack;
+#N canvas 176 115 803 636 SHOCK_ABSORBER 0;
+#X obj 91 41 inlet;
+#X obj 110 120 text insert \$0_ABSORBER;
+#X msg 177 88 1e+09;
+#X obj 285 36 inlet;
+#X obj 304 194 text size \$0_ABSORBER;
+#X obj 285 278 f;
+#X obj 285 339 spigot;
+#X obj 331 264 t f b;
+#X msg 342 303 0;
+#X msg 372 303 1;
+#X obj 312 460 until;
+#X obj 312 481 f 0;
+#X obj 392 502 + 1;
+#X obj 312 434 t f b;
+#X msg 367 466 0;
+#X obj 312 543 text get \$0_ABSORBER;
+#X obj 312 584 outlet;
+#X text 279 9 heartbeat;
+#X text 90 15 obj attributes;
+#X obj 285 395 s \$0_reset_absorber;
+#X obj 304 235 moses;
+#X obj 285 303 moses 1;
+#X obj 285 360 t b f;
+#X obj 285 168 t b b b;
+#X obj 285 147 spigot;
+#X msg 328 112 0;
+#X obj 91 62 t b l b;
+#X msg 357 112 1;
+#X obj 452 584 outlet;
+#X text 438 74 collect objects attributes and \; deploy them in sync
+with heartbeat \;;
+#X obj 304 214 t f f;
+#X text 458 607 bang \;;
+#X text 288 607 elems in shock abs \;;
+#X obj 512 472 sel -1;
+#X obj 312 502 t f b f f;
+#X obj 512 495 s \$0_refresh_status;
+#X text 511 517 refresh status only when \; ABSORBER is empty \;;
+#X obj 545 441 - 1;
+#X connect 0 0 26 0;
+#X connect 2 0 1 1;
+#X connect 3 0 24 0;
+#X connect 4 0 30 0;
+#X connect 5 0 21 0;
+#X connect 6 0 22 0;
+#X connect 7 0 5 1;
+#X connect 7 1 9 0;
+#X connect 8 0 6 1;
+#X connect 9 0 6 1;
+#X connect 10 0 11 0;
+#X connect 11 0 34 0;
+#X connect 12 0 11 1;
+#X connect 13 0 10 0;
+#X connect 13 1 14 0;
+#X connect 14 0 11 1;
+#X connect 15 0 16 0;
+#X connect 20 0 8 0;
+#X connect 20 1 7 0;
+#X connect 21 1 6 0;
+#X connect 22 0 19 0;
+#X connect 22 1 13 0;
+#X connect 23 0 5 0;
+#X connect 23 1 4 0;
+#X connect 23 2 25 0;
+#X connect 24 0 23 0;
+#X connect 25 0 24 1;
+#X connect 26 0 27 0;
+#X connect 26 1 1 0;
+#X connect 26 2 2 0;
+#X connect 27 0 24 1;
+#X connect 30 0 20 0;
+#X connect 30 1 37 0;
+#X connect 33 0 35 0;
+#X connect 34 0 33 0;
+#X connect 34 1 28 0;
+#X connect 34 2 15 0;
+#X connect 34 3 12 0;
+#X connect 37 0 33 1;
+#X restore 570 127 pd SHOCK_ABSORBER;
+#X obj 570 101 list;
+#N canvas 169 134 1095 620 INITIALIZE_OBJ 0;
+#X obj 405 416 t l b;
+#X obj 405 465 list prepend;
+#X msg 432 437 1e+09;
+#X obj 405 486 text insert \$0_BUFFER;
+#N canvas 367 74 485 517 ADD_OBJ_TO_POOL 0;
+#X obj 114 332 text search \$0_OBJECTS;
+#X obj 87 310 t s s;
+#X obj 87 397 spigot;
+#X obj 87 458 text insert \$0_OBJECTS;
+#X msg 151 427 1e+09;
+#X obj 87 427 t s b;
+#X obj 88 27 inlet;
+#X obj 114 353 == -1;
+#X obj 87 290 symbol;
+#X obj 138 27 inlet;
+#X text 141 11 sync from heartbeat;
+#X obj 144 67 list prepend;
+#X obj 144 88 t l l;
+#X obj 87 119 list store;
+#N canvas 145 88 450 300 ITER 0;
+#X obj 146 32 inlet;
+#X obj 146 193 list trim;
+#X obj 146 214 outlet;
+#X obj 146 108 list split 1;
+#X obj 180 149 t l;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 3 1 4 0;
+#X connect 4 0 3 0;
+#X restore 87 260 pd ITER;
+#X obj 87 140 route bang;
+#X obj 87 170 t l b b;
+#X connect 0 0 7 0;
+#X connect 1 0 2 0;
+#X connect 1 1 0 0;
+#X connect 2 0 5 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 5 1 4 0;
+#X connect 6 0 11 0;
+#X connect 7 0 2 1;
+#X connect 8 0 1 0;
+#X connect 9 0 13 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 1;
+#X connect 12 1 11 1;
+#X connect 13 0 15 0;
+#X connect 14 0 8 0;
+#X connect 15 1 16 0;
+#X connect 16 0 14 0;
+#X connect 16 1 13 1;
+#X connect 16 2 11 1;
+#X restore 501 407 pd ADD_OBJ_TO_POOL;
+#X obj 474 384 t s s;
+#X obj 351 159 list split 1;
+#X obj 405 357 unpack;
+#N canvas 670 133 450 300 ITER 0;
+#X obj 146 32 inlet;
+#X obj 146 213 list trim;
+#X obj 146 234 outlet;
+#X obj 146 78 list split 2;
+#X obj 180 109 t l;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 3 1 4 0;
+#X connect 4 0 3 0;
+#X restore 378 310 pd ITER 2;
+#X obj 405 384 pack;
+#X obj 378 333 t l l;
+#X obj 351 190 t b s;
+#X obj 351 218 list store;
+#X obj 378 588 outlet;
+#X obj 351 82 inlet;
+#X obj 591 83 inlet;
+#X text 339 56 from \$0_SHOCK_ABSORBER outlet 1;
+#X text 549 56 from \$0_SHOCK_ABSORBER outlet 2;
+#X obj 351 237 t b l;
+#X obj 48 105 list split 1;
+#N canvas 670 133 450 300 ITER 0;
+#X obj 146 32 inlet;
+#X obj 146 213 list trim;
+#X obj 146 234 outlet;
+#X obj 146 78 list split 2;
+#X obj 180 109 t l;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 3 1 4 0;
+#X connect 4 0 3 0;
+#X restore 82 188 pd ITER 2;
+#X obj 82 209 unpack;
+#X obj 109 259 text search \$0_BUFFER 1;
+#X obj 149 158 list length;
+#X obj 149 179 / 2;
+#X obj 82 237 t b f;
+#X obj 37 314 f 0;
+#X obj 37 335 t f f;
+#X obj 77 335 + 1;
+#X msg 68 313 0;
+#X obj 37 356 sel -1;
+#X obj 108 349 - 1;
+#X obj 109 280 sel -1;
+#X obj 142 300 b;
+#X obj 142 349 t f f;
+#X obj 182 349 + 1;
+#X msg 173 327 1;
+#X obj 142 328 f 1;
+#X obj 182 299 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 83 410 f 0;
+#X msg 108 411 0;
+#X obj 82 140 t l l b b b;
+#X obj 83 431 == 0;
+#X obj 351 110 t l l;
+#X obj 351 131 spigot;
+#X obj 83 452 t f f;
+#X obj 83 473 sel 0 1;
+#X msg 83 504 OBJECT OVERLAP DETECTED!!!!!;
+#X obj 83 525 s \$0_inner_print;
+#X text 28 57 check if the requested spot is available \; otherwise
+don't create the object and \; throw an error \;;
+#X obj 351 279 s \$0_refresh_status;
+#X obj 351 258 spigot;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 1;
+#X connect 5 0 1 1;
+#X connect 5 1 4 0;
+#X connect 6 0 11 0;
+#X connect 6 1 12 1;
+#X connect 7 0 9 0;
+#X connect 7 1 9 1;
+#X connect 8 0 10 0;
+#X connect 9 0 0 0;
+#X connect 10 0 13 0;
+#X connect 10 1 7 0;
+#X connect 11 0 12 0;
+#X connect 11 1 5 0;
+#X connect 12 0 18 0;
+#X connect 14 0 43 0;
+#X connect 15 0 4 1;
+#X connect 18 1 8 0;
+#X connect 19 1 41 0;
+#X connect 20 0 21 0;
+#X connect 21 0 25 0;
+#X connect 22 0 32 0;
+#X connect 23 0 24 0;
+#X connect 24 0 31 0;
+#X connect 25 0 26 0;
+#X connect 25 1 22 0;
+#X connect 26 0 27 0;
+#X connect 27 0 30 0;
+#X connect 27 1 28 0;
+#X connect 28 0 26 1;
+#X connect 29 0 26 1;
+#X connect 30 0 39 0;
+#X connect 31 0 30 1;
+#X connect 32 1 33 0;
+#X connect 33 0 37 0;
+#X connect 34 0 39 1;
+#X connect 34 1 35 0;
+#X connect 35 0 37 1;
+#X connect 36 0 37 1;
+#X connect 37 0 34 0;
+#X connect 38 0 37 0;
+#X connect 39 0 42 0;
+#X connect 40 0 39 1;
+#X connect 41 0 20 0;
+#X connect 41 1 23 0;
+#X connect 41 2 29 0;
+#X connect 41 3 36 0;
+#X connect 41 4 40 0;
+#X connect 42 0 45 0;
+#X connect 43 0 44 0;
+#X connect 43 1 19 0;
+#X connect 44 0 6 0;
+#X connect 45 0 46 0;
+#X connect 45 1 44 1;
+#X connect 46 0 47 0;
+#X connect 47 0 48 0;
+#X connect 51 0 50 0;
+#X restore 570 157 pd INITIALIZE_OBJ;
+#N canvas 677 169 482 476 REFRESH_OBJECTS 0;
+#X obj 165 289 text search \$0_BUFFER 0 1;
+#X obj 164 170 t l;
+#X obj 130 46 list split 1;
+#X obj 130 146 list split 2;
+#X obj 130 198 list prepend;
+#X obj 130 68 t b s;
+#X obj 130 90 list;
+#X obj 165 263 list split 2;
+#X obj 149 320 text set \$0_BUFFER;
+#X obj 130 222 t l l l;
+#X obj 130 397 outlet;
+#X text 122 419 update Pd UI;
+#X obj 130 364 list split 1;
+#X obj 130 16 r \$1_to_LP_GUI_obj_update;
+#X connect 0 0 8 1;
+#X connect 1 0 3 0;
+#X connect 2 0 5 0;
+#X connect 2 1 6 1;
+#X connect 3 0 4 0;
+#X connect 3 1 1 0;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 5 1 4 1;
+#X connect 6 0 3 0;
+#X connect 7 0 0 0;
+#X connect 9 0 12 0;
+#X connect 9 1 8 0;
+#X connect 9 2 7 0;
+#X connect 12 1 10 0;
+#X connect 13 0 2 0;
+#X restore 830 111 pd REFRESH_OBJECTS;
+#X obj 830 133 t l l;
+#X obj 857 161 unpack 0 0;
+#X obj 857 190 swap;
+#X obj 857 258 s;
+#X obj 872 235 makefilename \$0_elem_%d;
+#X msg 857 214 color \$1;
+#X obj 914 185 COLORS_NO_GUI;
+#X text 575 557 for Pd GUI \;;
+#X obj 570 54 r \$1_to_LP_GUI;
+#X obj 715 56 r \$0_HB_to_shock_abs;
+#X obj 689 122 s \$0_set;
+#X obj 597 207 s \$0_set;
+#X text 34 10 to the various widgets \;;
+#X text 525 10 from the various widgets \;;
+#X obj 570 76 route list reset remove;
+#X connect 1 0 7 0;
+#X connect 1 1 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 3 2 1;
+#X connect 6 0 7 1;
+#X connect 7 0 0 0;
+#X connect 8 1 5 0;
+#X connect 9 0 1 0;
+#X connect 10 0 9 0;
+#X connect 10 1 4 0;
+#X connect 10 2 15 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 1;
+#X connect 14 0 10 0;
+#X connect 14 1 8 0;
+#X connect 14 2 6 0;
+#X connect 17 0 10 0;
+#X connect 17 1 6 0;
+#X connect 17 2 5 0;
+#X connect 18 0 14 0;
+#X connect 19 0 27 0;
+#X connect 19 1 26 0;
+#X connect 20 0 34 0;
+#X connect 21 0 22 0;
+#X connect 22 0 33 0;
+#X connect 22 1 23 0;
+#X connect 23 0 33 1;
+#X connect 24 0 36 0;
+#X connect 25 0 34 1;
+#X connect 26 0 30 0;
+#X connect 26 1 42 0;
+#X connect 27 0 20 0;
+#X connect 27 1 25 0;
+#X connect 27 2 29 0;
+#X connect 28 0 29 1;
+#X connect 29 0 31 0;
+#X connect 30 0 29 1;
+#X connect 31 0 35 0;
+#X connect 33 0 24 0;
+#X connect 35 0 43 0;
+#X connect 37 0 58 0;
+#X connect 37 1 19 0;
+#X connect 39 0 21 0;
+#X connect 40 0 19 0;
+#X connect 40 1 59 0;
+#X connect 42 0 43 0;
+#X connect 42 1 28 0;
+#X connect 43 0 20 1;
+#X connect 44 0 46 0;
+#X connect 44 1 46 1;
+#X connect 45 0 44 0;
+#X connect 46 0 40 0;
+#X connect 47 0 48 0;
+#X connect 48 0 19 0;
+#X connect 48 1 49 0;
+#X connect 49 0 50 0;
+#X connect 49 1 54 0;
+#X connect 50 0 53 0;
+#X connect 50 1 52 0;
+#X connect 52 0 51 1;
+#X connect 53 0 51 0;
+#X connect 54 3 50 1;
+#X connect 56 0 62 0;
+#X connect 57 0 44 1;
+#X connect 62 0 45 0;
+#X connect 62 1 38 0;
+#X connect 62 2 37 0;
+#X restore 939 333 pd PROCESSING;
+#N canvas 0 23 545 423 HB 0;
+#X obj 97 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#N canvas 251 78 829 689 WHAT_TO_DELETE 0;
+#X obj 106 16 inlet;
+#X obj 133 89 t f f;
+#X obj 106 148 spigot;
+#X obj 160 109 != -1;
+#X obj 106 118 f;
+#X obj 106 169 t f b;
+#X obj 106 190 until;
+#X obj 106 211 f 0;
+#X obj 166 232 + 1;
+#X msg 156 191 0;
+#X obj 133 68 text size \$0_OBJECTS;
+#X obj 106 273 text get \$0_OBJECTS;
+#X obj 106 294 unpack s f;
+#X obj 163 313 == 0;
+#X obj 106 325 spigot;
+#X obj 156 407 moses;
+#X obj 183 432 text delete \$0_OBJECTS;
+#X obj 106 498 moses;
+#X obj 106 462 text search \$0_BUFFER;
+#X obj 106 385 symbol;
+#X obj 152 582 text delete \$0_BUFFER;
+#X obj 106 635 s \$0_refresh_status;
+#X obj 133 519 t b f f;
+#X obj 391 566 unpack s 0;
+#X obj 448 594 * 2;
+#X obj 448 615 t b f;
+#X msg 448 636 0 0;
+#X obj 448 656 array set \$0_LAYOUT;
+#X obj 391 545 text get \$0_BUFFER;
+#X text 312 185 check if the OBJECT status is 0 \; in that case deletes
+the OBJ from \; the buffers and refresh the surface \;;
+#X text 210 401 delete from \$0_OBJECTS;
+#X text 80 669 when all OBJECT instances have been removed \; from
+\$0_BUFFER \, then refresh the surface \; [pd REFRESH_LAYOUT] \;;
+#X text 504 574 grab 'element' id and \; reset data associated with
+it \; in \$0_LAYOUT \;;
+#X msg 279 314 0;
+#X obj 279 335 s \$0_heartbeat_off_on;
+#X text 313 290 stop heartbeat for \; cleaning up \; it's reset in
+[pd REFRESH_LAYOUT] \;;
+#X obj 106 232 t f f f;
+#X obj 156 385 f;
+#X obj 106 354 t s b b;
+#X text 243 462 delete from \$0_BUFFER - this needs to be scanned since
+\; there could be several rows with the same obj name \;;
+#X obj 106 37 t b b;
+#X connect 0 0 40 0;
+#X connect 1 0 4 1;
+#X connect 1 1 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 5 1 9 0;
+#X connect 6 0 7 0;
+#X connect 7 0 36 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 1;
+#X connect 10 0 1 0;
+#X connect 11 0 12 0;
+#X connect 12 0 14 0;
+#X connect 12 1 13 0;
+#X connect 13 0 14 1;
+#X connect 14 0 38 0;
+#X connect 15 1 16 0;
+#X connect 17 0 21 0;
+#X connect 17 1 22 0;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 22 0 19 0;
+#X connect 22 1 20 0;
+#X connect 22 2 28 0;
+#X connect 23 1 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 25 1 27 1;
+#X connect 26 0 27 0;
+#X connect 28 0 23 0;
+#X connect 33 0 34 0;
+#X connect 36 0 11 0;
+#X connect 36 1 37 1;
+#X connect 36 2 8 0;
+#X connect 37 0 15 0;
+#X connect 38 0 19 0;
+#X connect 38 1 37 0;
+#X connect 38 2 33 0;
+#X connect 40 0 4 0;
+#X connect 40 1 10 0;
+#X restore 97 211 pd WHAT_TO_DELETE;
+#N canvas 458 23 531 540 SET_OBJ_STATUS_TO_0 0;
+#X obj 106 26 inlet;
+#X obj 106 47 t b b;
+#X obj 145 109 t f f;
+#X obj 106 168 spigot;
+#X obj 172 139 != -1;
+#X obj 106 138 f;
+#X obj 106 189 t f b;
+#X obj 106 210 until;
+#X obj 106 231 f 0;
+#X obj 106 252 t f f;
+#X obj 146 252 + 1;
+#X msg 156 231 0;
+#X obj 145 88 text size \$0_OBJECTS;
+#X obj 106 298 text get \$0_OBJECTS;
+#X text 346 132 set all object status to 0 \; if they set it back to
+1 \; they won't be deleted \;;
+#X obj 106 319 unpack s;
+#X obj 106 340 list append 0;
+#X obj 106 381 text set \$0_OBJECTS;
+#X obj 106 273 t f f;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 1 1 12 0;
+#X connect 2 0 5 1;
+#X connect 2 1 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 6 1 11 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 18 0;
+#X connect 9 1 10 0;
+#X connect 10 0 8 1;
+#X connect 11 0 8 1;
+#X connect 12 0 2 0;
+#X connect 13 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 18 0 13 0;
+#X connect 18 1 17 1;
+#X restore 144 280 pd SET_OBJ_STATUS_TO_0;
+#N canvas 0 23 560 424 OBJ_STATUS_REPLY 0;
+#X obj 55 388 text set \$0_OBJECTS;
+#X obj 55 357 list append 1;
+#X obj 94 135 text search \$0_OBJECTS;
+#X obj 94 156 moses;
+#X text 160 22 if OBJECT replies \, set back its status to 1 \; so
+it won't be deleted \;;
+#X obj 55 310 spigot;
+#X msg 88 280 1;
+#X obj 245 357 list append 1;
+#X obj 245 310 spigot;
+#X obj 245 332 t s b;
+#X msg 340 357 1e+09;
+#X obj 245 388 text insert \$0_OBJECTS;
+#X msg 118 280 0;
+#X obj 94 176 t b b;
+#X msg 278 280 1;
+#X msg 308 280 0;
+#X obj 131 176 t f b b;
+#X obj 55 104 t s s s;
+#X obj 55 73 r \$1_heartbeat_reply;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 13 0;
+#X connect 3 1 16 0;
+#X connect 5 0 1 0;
+#X connect 6 0 5 1;
+#X connect 7 0 11 0;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;
+#X connect 9 1 10 0;
+#X connect 10 0 11 1;
+#X connect 12 0 5 1;
+#X connect 13 0 14 0;
+#X connect 13 1 12 0;
+#X connect 14 0 8 1;
+#X connect 15 0 8 1;
+#X connect 16 0 0 1;
+#X connect 16 1 6 0;
+#X connect 16 2 15 0;
+#X connect 17 0 5 0;
+#X connect 17 1 8 0;
+#X connect 17 2 2 0;
+#X connect 18 0 17 0;
+#X restore 125 342 pd OBJ_STATUS_REPLY;
+#N canvas 1 23 1072 741 REFRESH_LAYOUT 0;
+#X obj 140 19 r \$0_refresh_status;
+#X obj 155 65 array size \$0_LAYOUT;
+#X obj 140 153 f;
+#X obj 140 174 t f b;
+#X obj 140 225 until;
+#X obj 140 246 f 0;
+#X obj 140 267 t f f;
+#X obj 180 267 + 1;
+#X msg 184 244 0;
+#X obj 140 340 * 2;
+#X obj 140 391 array get \$0_LAYOUT;
+#X obj 140 361 t f b;
+#X msg 195 368 2;
+#X obj 140 412 unpack;
+#X obj 140 608 s;
+#X obj 155 577 makefilename \$0_elem_%d;
+#X msg 250 515 color \$1;
+#X obj 175 484 COLORS_NO_GUI;
+#X text 331 32 when the 'heartbeat' ([pd WHAT_TO_DELETE]) \; detects
+something to delete \; it triggers this patch to refresh \; the status
+of the entire surface \;;
+#X obj 140 195 t f f;
+#X obj 373 358 - 1;
+#X obj 340 384 sel -1;
+#X obj 340 441 s \$0_heartbeat_off_on;
+#X msg 340 408 1;
+#X text 395 390 restart heartbeat when \; cleaning up is finished \;
+;
+#X obj 394 606 f;
+#X obj 394 579 t b f;
+#X obj 140 448 t f f;
+#X obj 140 310 t f f f f;
+#X obj 155 109 * 0.5;
+#X obj 28 315 sel -1;
+#X obj 492 474 list prepend;
+#X obj 492 496 t l l;
+#X obj 471 521 list;
+#X obj 140 40 t b b b;
+#X obj 492 438 pack;
+#X obj 155 131 t f f;
+#X obj 194 161 - 1;
+#X obj 471 655 TO_LP_X;
+#X obj 471 593 spigot;
+#X obj 541 593 spigot 1;
+#X obj 673 487 r \$0_device;
+#X msg 673 529 1;
+#X msg 703 529 0;
+#X obj 673 550 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 673 508 sel LP_Pro;
+#X obj 591 487 r \$0_device;
+#X msg 591 529 1;
+#X msg 621 529 0;
+#X obj 591 550 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 591 508 sel LP_X;
+#X obj 541 655 TO_LPP;
+#X obj 871 593 spigot;
+#X obj 991 487 r \$0_device;
+#X msg 991 529 1;
+#X msg 1021 529 0;
+#X obj 991 550 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 991 508 sel LPM_MK3;
+#X obj 871 655 TO_LPM_MK3;
+#X obj 771 593 spigot;
+#X obj 891 487 r \$0_device;
+#X msg 891 529 1;
+#X msg 921 529 0;
+#X obj 891 550 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 891 508 sel LP_Pro_MK3;
+#X obj 771 655 TO_LPP3;
+#X obj 763 487 r \$0_device;
+#X msg 763 529 1;
+#X msg 793 529 0;
+#X obj 763 550 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 763 508 sel LP2;
+#X obj 631 655 TO_LP2;
+#X obj 631 593 spigot;
+#X obj 45 345 sel -1;
+#X obj 213 225 int;
+#X obj 534 438 t b b;
+#X text 575 426 don't send a huge sysex but \; instead 2 smaller sysex
+\;;
+#X obj 28 288 t f f f f;
+#X obj 194 184 t f f f;
+#X obj 243 225 int;
+#X obj 62 375 sel -1;
+#X obj 213 204 / 3;
+#X obj 243 204 * 0.666667;
+#X text 271 185 divided by 2/3 \;;
+#X connect 0 0 34 0;
+#X connect 1 0 29 0;
+#X connect 2 0 3 0;
+#X connect 3 0 19 0;
+#X connect 3 1 8 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 77 0;
+#X connect 6 1 7 0;
+#X connect 7 0 5 1;
+#X connect 8 0 5 1;
+#X connect 9 0 11 0;
+#X connect 10 0 13 0;
+#X connect 11 0 10 0;
+#X connect 11 1 12 0;
+#X connect 12 0 10 1;
+#X connect 13 0 27 0;
+#X connect 13 1 14 0;
+#X connect 15 0 14 1;
+#X connect 16 0 14 0;
+#X connect 17 3 16 0;
+#X connect 19 0 4 0;
+#X connect 19 1 20 0;
+#X connect 20 0 21 1;
+#X connect 21 0 23 0;
+#X connect 23 0 22 0;
+#X connect 25 0 35 0;
+#X connect 26 0 25 0;
+#X connect 26 1 35 1;
+#X connect 27 0 17 0;
+#X connect 27 1 26 0;
+#X connect 28 0 21 0;
+#X connect 28 1 9 0;
+#X connect 28 2 15 0;
+#X connect 28 3 25 1;
+#X connect 29 0 36 0;
+#X connect 30 0 33 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 1;
+#X connect 32 1 31 1;
+#X connect 33 0 39 0;
+#X connect 33 0 40 0;
+#X connect 33 0 52 0;
+#X connect 33 0 59 0;
+#X connect 33 0 72 0;
+#X connect 34 0 2 0;
+#X connect 34 1 1 0;
+#X connect 34 2 31 1;
+#X connect 35 0 31 0;
+#X connect 36 0 2 1;
+#X connect 36 1 37 0;
+#X connect 37 0 78 0;
+#X connect 39 0 38 0;
+#X connect 40 0 51 0;
+#X connect 41 0 45 0;
+#X connect 42 0 44 0;
+#X connect 43 0 44 0;
+#X connect 44 0 40 1;
+#X connect 45 0 42 0;
+#X connect 45 1 43 0;
+#X connect 46 0 50 0;
+#X connect 47 0 49 0;
+#X connect 48 0 49 0;
+#X connect 49 0 39 1;
+#X connect 50 0 47 0;
+#X connect 50 1 48 0;
+#X connect 52 0 58 0;
+#X connect 53 0 57 0;
+#X connect 54 0 56 0;
+#X connect 55 0 56 0;
+#X connect 56 0 52 1;
+#X connect 57 0 54 0;
+#X connect 57 1 55 0;
+#X connect 59 0 65 0;
+#X connect 60 0 64 0;
+#X connect 61 0 63 0;
+#X connect 62 0 63 0;
+#X connect 63 0 59 1;
+#X connect 64 0 61 0;
+#X connect 64 1 62 0;
+#X connect 66 0 70 0;
+#X connect 67 0 69 0;
+#X connect 68 0 69 0;
+#X connect 69 0 72 1;
+#X connect 70 0 67 0;
+#X connect 70 1 68 0;
+#X connect 72 0 71 0;
+#X connect 73 0 75 0;
+#X connect 74 0 73 1;
+#X connect 75 0 33 0;
+#X connect 75 1 31 1;
+#X connect 77 0 30 0;
+#X connect 77 1 73 0;
+#X connect 77 2 80 0;
+#X connect 77 3 28 0;
+#X connect 78 0 30 1;
+#X connect 78 1 81 0;
+#X connect 78 2 82 0;
+#X connect 79 0 80 1;
+#X connect 80 0 75 0;
+#X connect 81 0 74 0;
+#X connect 82 0 79 0;
+#X restore 125 361 pd REFRESH_LAYOUT;
+#X obj 97 181 t b b b b b;
+#X obj 160 300 s \$1_from_LP_GUI;
+#X obj 112 236 s \$1_heartbeat;
+#X obj 97 59 r \$0_status;
+#X obj 130 127 r \$0_heartbeat_off_on;
+#X obj 97 148 spigot;
+#X obj 128 260 s \$0_HB_to_shock_abs;
+#X text 268 46 heartbeat \;;
+#X obj 97 105 metro 750;
+#X connect 0 0 13 0;
+#X connect 5 0 1 0;
+#X connect 5 1 7 0;
+#X connect 5 2 11 0;
+#X connect 5 3 2 0;
+#X connect 5 4 6 0;
+#X connect 8 0 0 0;
+#X connect 9 0 10 1;
+#X connect 10 0 5 0;
+#X connect 13 0 10 0;
+#X restore 939 353 pd HB;
+#X obj 910 189 s \$0_print_objects;
+#X obj 921 209 s \$0_print_args;
+#X obj 373 160 route set reset play _HB_off _buffers status refresh
+device daw_mode programmer_mode print_objects print_args print_methods
+, f 125;
+#X obj 1061 183 s \$0_print_methods;
+#X obj 280 16 bng 15 250 50 0 empty empty info -25 7 0 10 -262144 -1
+-1;
+#X obj 516 125 s \$0_print_args;
+#X obj 477 76 s \$0_print_outlets;
+#X obj 496 99 s \$0_print_methods;
+#X obj 477 41 t b b b;
+#X obj 41 297 tgl 15 0 empty \$0_elem_101 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 71 297 tgl 15 0 empty \$0_elem_102 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 101 297 tgl 15 0 empty \$0_elem_103 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 131 297 tgl 15 0 empty \$0_elem_104 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 161 297 tgl 15 0 empty \$0_elem_105 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 191 297 tgl 15 0 empty \$0_elem_106 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 221 297 tgl 15 0 empty \$0_elem_107 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 251 297 tgl 15 0 empty \$0_elem_108 empty 17 7 0 10 -1 -1 -1
+0 -1;
+#X obj 46 540 array define \$0_LAYOUT 218;
+#X obj 280 37 tgl 15 0 empty \$0_elem_99 empty 17 7 0 10 -1 -1 -1 0
+-1;
+#X obj 15 338 bng 15 250 50 0 \$0_from_g_select_device \$0_to_g_select_device
+device 17 7 0 10 -262144 -1 -1;
+#N canvas 196 242 165 127 SELECT_DEVICE 0;
+#N canvas 0 23 472 376 SELECT_DEVICE_CORE 0;
+#X obj 106 102 bng 15 250 50 0 empty empty Launchpad_MK2 17 7 0 10
+-262144 -1 -1;
+#X msg 146 242 LP_X;
+#X msg 186 242 LP_Pro;
+#X msg 236 242 LPM_MK3;
+#X msg 296 242 LP_Pro_MK3;
+#X msg 376 242 LP2;
+#X obj 106 122 bng 15 250 50 0 empty empty Launchpad_Pro_MK1 17 7 0
+10 -262144 -1 -1;
+#X obj 106 142 bng 15 250 50 0 empty empty Launchpad_Mini_MK3 17 7
+0 10 -262144 -1 -1;
+#X obj 106 162 bng 15 250 50 0 empty empty Launchpad_X 17 7 0 10 -262144
+-1 -1;
+#X obj 106 182 bng 15 250 50 0 empty empty Launchpad_Pro_MK3 17 7 0
+10 -262144 -1 -1;
+#X obj 146 289 symbol;
+#X obj 146 310 s \$0_device;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 2 0 10 0;
+#X connect 3 0 10 0;
+#X connect 4 0 10 0;
+#X connect 5 0 10 0;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 1 0;
+#X connect 9 0 4 0;
+#X connect 10 0 11 0;
+#X coords 0 -1 1 1 135 100 2 100 100;
+#X restore 9 7 pd SELECT_DEVICE_CORE;
+#X restore 939 314 pd SELECT_DEVICE;
+#X obj 15 356 tgl 15 0 \$0_from_g_off_on \$0_to_g_off_on off/on 17
+7 0 10 -262144 -1 -1 0 1;
+#X obj 340 94 r \$0_from_g_off_on;
+#X msg 340 115 status \$1;
+#X obj 629 230 t f f f;
+#X msg 648 305 set \$1;
+#X obj 648 326 s \$0_to_g_off_on;
+#X msg 1092 88 label \$1;
+#X obj 1092 109 s \$0_to_g_main_cnv;
+#X obj 1092 58 makefilename LAUNCHPAD_GUI_ID_%d;
+#X obj 936 37 t b b b;
+#X obj 1092 30 \$1;
+#X text 829 473 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 860 595 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 830 503 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 830 560 You may obtain a copy of the License at;
+#X text 830 625 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 830 681 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 66 0 143 0;
+#X connect 99 0 110 0;
+#X connect 100 0 171 0;
+#X connect 104 0 103 0;
+#X connect 105 0 106 0;
+#X connect 108 0 104 0;
+#X connect 108 0 105 0;
+#X connect 108 0 117 0;
+#X connect 111 0 103 0;
+#X connect 111 0 106 0;
+#X connect 113 0 114 0;
+#X connect 113 1 101 0;
+#X connect 117 0 116 0;
+#X connect 118 0 117 0;
+#X connect 119 0 120 0;
+#X connect 121 0 119 0;
+#X connect 123 0 165 0;
+#X connect 126 0 109 0;
+#X connect 127 0 124 0;
+#X connect 129 0 128 0;
+#X connect 132 0 122 0;
+#X connect 134 0 111 0;
+#X connect 136 0 137 0;
+#X connect 137 0 109 0;
+#X connect 143 0 138 0;
+#X connect 143 1 113 0;
+#X connect 143 2 102 0;
+#X connect 143 3 135 0;
+#X connect 143 4 133 0;
+#X connect 143 5 123 0;
+#X connect 143 6 124 0;
+#X connect 143 7 129 0;
+#X connect 143 8 130 0;
+#X connect 143 9 131 0;
+#X connect 143 10 141 0;
+#X connect 143 11 142 0;
+#X connect 143 12 144 0;
+#X connect 145 0 149 0;
+#X connect 149 0 147 0;
+#X connect 149 1 148 0;
+#X connect 149 2 146 0;
+#X connect 163 0 164 0;
+#X connect 164 0 143 0;
+#X connect 165 0 127 0;
+#X connect 165 1 166 0;
+#X connect 165 2 125 0;
+#X connect 166 0 167 0;
+#X connect 168 0 169 0;
+#X connect 170 0 168 0;
+#X connect 171 0 126 0;
+#X connect 171 1 99 0;
+#X connect 171 2 172 0;
+#X connect 172 0 170 0;
+#X coords 0 -1 1 1 290 390 2 10 10;

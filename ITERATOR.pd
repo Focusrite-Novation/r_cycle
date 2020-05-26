@@ -1,0 +1,27 @@
+#N canvas 0 23 724 395 10;
+#X obj 146 32 inlet;
+#X obj 146 108 list split 1;
+#X obj 172 158 list store;
+#X obj 146 129 t b l;
+#X obj 148 193 list trim;
+#X obj 148 214 outlet;
+#X text 324 67 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 355 189 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 325 97 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 325 154 You may obtain a copy of the License at;
+#X text 325 219 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 325 275 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 1 2 1;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 3 1 4 0;
+#X connect 4 0 5 0;

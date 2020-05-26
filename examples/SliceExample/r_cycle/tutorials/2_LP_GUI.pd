@@ -1,0 +1,79 @@
+#N canvas 183 23 849 755 12;
+#X declare -path r_cycle;
+#X declare -path ../;
+#X obj 14 45 DEVICE_SELECT;
+#X text 166 48 <<< this shortcut can be added by adding a new object
+a typing 'DEVICE_SELECT'. A list of r_cycle object can be found in
+the ReadMe or in r_cycle > Pd > utils., f 80;
+#X msg 33 202 device LP_Pro;
+#X msg 53 224 device LP_X;
+#X obj 104 340 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 104 381 status \$1;
+#X msg 77 305 status 0;
+#X msg 53 280 status 1;
+#X text 126 280 <<< 'status 1' will activate the GUI.;
+#X text 152 304 <<< 'status 0' will deactivate the GUI.;
+#X msg 319 446 print_args;
+#X obj 319 480 KEYBOARD;
+#X obj 13 412 LP_GUI 1;
+#X msg 713 864 end;
+#X obj 448 621 KEYBOARD;
+#X obj 105 826 DRUM_PADS;
+#X obj 277 826 BUTTON;
+#X obj 452 826 RADIO;
+#X obj 625 826 GRID;
+#X text 8 108 'LP_GUI' provides a blank canvas for r_cycle widgets.
+The object requires a 'status' and 'device' message. When adding adding
+an 'LP'_GUI' object it is necessary to set the id \, this can be done
+by adding a number to the end of "LP_GUI" when adding the object \,
+for example "LP_GUI 1". The id in this patch is also set to 1, f 104
+;
+#X text 311 679 With the 'KEYBOARD' only the highlighted pads will
+be active \, all other pads are inactive. This is the same with each
+of the widget objects.;
+#X msg 63 246 device LPM_MK3;
+#X obj 14 14 declare -path r_cycle;
+#X msg 13 182 device LP_Pro_MK3;
+#X text 147 181 <<< Select device by sending a message or clicking
+the bang at the bottom of the LP_GUI object.;
+#X text 135 335 <<< connecting a toggle to a message with a throughput
+value allows the status to be controlled from the toggle. LP_GUI status
+can also be controlled using the toggle at the bottom of the object.
+, f 86;
+#X text 316 406 Once 'LP_GUI' is configured \, r_cycle widgets can
+be added to the surface of the LP., f 59;
+#X text 447 479 << Widget objects require additional arguments \, clicking
+the 'print_args' message or the 'bang' part of the object \, will print
+the necessary arguments in the Pd window. Check the arguments in the
+window and add them to the object below to a add a keyboard to the
+GUI and hardware. Objects will also accept print_methods and print_outlets
+messages., f 48;
+#N canvas 1 78 486 150 MISC 0;
+#X text 32 25 This is needed to make the r_cycle objects accessible
+even before placing the r_cycle folder in a place part of the path
+search in Pd \;;
+#X obj 34 87 declare -path ../;
+#X restore 196 14 pd MISC;
+#X text 18 865 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 49 987 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 19 895 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 19 952 You may obtain a copy of the License at;
+#X text 19 1017 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 19 1073 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 2 0 12 0;
+#X connect 3 0 12 0;
+#X connect 4 0 5 0;
+#X connect 5 0 12 0;
+#X connect 6 0 12 0;
+#X connect 7 0 12 0;
+#X connect 10 0 11 0;
+#X connect 21 0 12 0;
+#X connect 23 0 12 0;

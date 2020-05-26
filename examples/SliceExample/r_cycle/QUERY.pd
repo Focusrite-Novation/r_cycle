@@ -1,0 +1,37 @@
+#N canvas 95 82 914 329 12;
+#X obj 103 54 bng 15 250 50 0 empty empty inlets 17 7 0 10 -262144
+-1 -1;
+#X obj 103 74 bng 15 250 50 0 empty empty outlets 17 7 0 10 -262144
+-1 -1;
+#X obj 103 114 bng 15 250 50 0 empty empty methods 17 7 0 10 -262144
+-1 -1;
+#X msg 107 174 print_inlets;
+#X msg 117 194 print_outlets;
+#X msg 137 234 print_methods;
+#X obj 107 258 outlet;
+#X text 251 40 use this to query \; r_cycle objects \;;
+#X obj 103 94 bng 15 250 50 0 empty empty arguments 17 7 0 10 -262144
+-1 -1;
+#X msg 127 214 print_args;
+#X text 452 40 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 483 162 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 453 70 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 453 127 You may obtain a copy of the License at;
+#X text 453 192 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 453 248 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
+#X coords 0 -1 1 1 75 85 2 100 50;

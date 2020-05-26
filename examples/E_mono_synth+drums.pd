@@ -1,0 +1,214 @@
+#N canvas 28 81 896 588 10;
+#X declare -path r_cycle;
+#X declare -path ../;
+#X obj 460 187 / 127;
+#X obj 696 111 DSP_TOGGLE;
+#X obj 409 228 BAND_LIMITED;
+#X obj 409 471 dac~;
+#X obj 409 314 TAPE_DELAY;
+#X obj 409 437 *~;
+#X obj 487 206 r \$0_synth_wform;
+#X obj 648 484 dac~;
+#X obj 648 453 *~ 0.9;
+#X obj 696 68 DEVICE_SELECT;
+#X obj 648 423 MULTI_SAMPLER 4;
+#X obj 21 15 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 21 35 status \$1;
+#N canvas 0 23 589 197 DELAY_GUI 0;
+#X obj 28 41 cnv 15 520 25 empty empty GUI 5 12 0 12 -204800 -66577
+0;
+#X obj 59 87 s \$0_del_fback;
+#X floatatom 59 67 5 0 0 0 - - -;
+#X obj 219 87 s \$0_del_time;
+#X floatatom 219 67 5 0 0 0 - - -;
+#X floatatom 380 67 5 0 0 0 - - -;
+#X obj 380 87 s \$0_del_dry_wet;
+#X obj 59 45 RADIO 36 6 17 19 1 0;
+#X obj 219 45 RADIO 35 6 56 59 1 0;
+#X obj 380 45 RADIO 37 6 56 59 1 0;
+#X connect 2 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 7 0 2 0;
+#X connect 8 0 4 0;
+#X connect 9 0 5 0;
+#X restore 21 469 pd DELAY_GUI;
+#X obj 498 227 cnv 15 80 25 empty empty MONO_SYNTH 5 12 0 12 -262130
+-66577 0;
+#X obj 588 313 cnv 15 50 25 empty empty DELAY 5 12 0 12 -204786 -66577
+0;
+#N canvas 0 23 709 427 SYNTH_GUI 0;
+#X obj 28 52 cnv 15 200 25 empty empty GUI 5 12 0 12 -204800 -66577
+0;
+#X floatatom 57 78 5 0 0 0 - - -;
+#X floatatom 115 78 5 0 0 0 - - -;
+#X floatatom 174 78 5 0 0 0 - - -;
+#X obj 57 99 s \$0_synth_vol;
+#X obj 57 56 RADIO 38 6 120 127 1 0;
+#X obj 28 164 cnv 15 200 25 empty empty GUI 5 12 0 12 -204800 -66577
+0;
+#X floatatom 95 190 5 0 0 0 - - -;
+#X obj 95 211 s \$0_synth_wform;
+#X obj 60 168 RADIO 31 4 13 15 0 0;
+#X obj 256 66 cnv 15 200 25 empty empty GUI 5 12 0 12 -204800 -66577
+0;
+#X obj 280 175 cnv 15 200 25 empty empty GUI 5 12 0 12 -204800 -66577
+0;
+#X msg 285 48 print_args;
+#X symbolatom 285 100 10 0 0 0 - - -;
+#X floatatom 396 101 5 0 0 0 - - -;
+#X symbolatom 312 209 10 0 0 0 - - -;
+#X floatatom 435 209 5 0 0 0 - - -;
+#X obj 396 122 sel 1;
+#X obj 435 229 sel 1;
+#X obj 396 326 s \$0_octave;
+#X obj 396 251 INC_DEC;
+#X obj 396 297 max 0;
+#X obj 396 276 min 10;
+#X obj 285 70 BUTTON 91 36 oct_up 0;
+#X obj 312 177 BUTTON 92 36 oct_down 0;
+#X obj 513 113 loadbang;
+#X msg 513 174 5;
+#X connect 1 0 4 0;
+#X connect 5 0 1 0;
+#X connect 5 1 2 0;
+#X connect 5 2 3 0;
+#X connect 7 0 8 0;
+#X connect 9 1 7 0;
+#X connect 12 0 23 0;
+#X connect 14 0 17 0;
+#X connect 16 0 18 0;
+#X connect 17 0 20 0;
+#X connect 18 0 20 1;
+#X connect 20 0 22 0;
+#X connect 21 0 19 0;
+#X connect 21 0 20 2;
+#X connect 22 0 21 0;
+#X connect 23 0 13 0;
+#X connect 23 1 14 0;
+#X connect 24 0 15 0;
+#X connect 24 1 16 0;
+#X connect 25 0 26 0;
+#X connect 26 0 20 2;
+#X restore 21 491 pd SYNTH_GUI;
+#X obj 750 422 cnv 15 50 25 empty empty DRUMS 5 12 0 12 -261682 -66577
+0;
+#X obj 44 5 cnv 15 90 25 empty empty TURN_ON_GUI 4 12 0 12 -258113
+-66577 0;
+#X obj 21 62 LP_GUI 0;
+#X obj 371 135 cnv 15 180 25 empty empty GUI 5 12 0 12 -204800 -66577
+0;
+#X obj 409 167 MONO_MIDI;
+#X obj 409 137 KEYBOARD 0 24 0;
+#X obj 609 389 cnv 15 210 25 empty empty GUI 5 12 0 12 -204800 -66577
+0;
+#N canvas 0 23 450 300 DELAY_PARAMS 0;
+#X obj 192 79 r \$0_del_fback;
+#X msg 192 101 feedback \$1;
+#X msg 142 141 time \$1;
+#X obj 142 59 r \$0_del_time;
+#X obj 142 82 pow 2;
+#X obj 142 115 * 750;
+#X msg 202 151 dry_wet \$1;
+#X obj 202 129 r \$0_del_dry_wet;
+#X obj 142 212 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 2 0 8 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X restore 572 282 pd DELAY_PARAMS;
+#N canvas 0 23 450 300 VOLUME 0;
+#X obj 167 97 r \$0_synth_vol;
+#X obj 167 119 pow 2;
+#X msg 167 141 \$1 5;
+#X obj 167 163 line~;
+#X obj 167 184 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X restore 424 416 pd VOLUME;
+#N canvas 0 23 450 300 KEYBOARD_PARAMS 0;
+#X floatatom 236 126 5 0 0 0 - - -;
+#X msg 236 146 transpose \$1;
+#X msg 187 98 print_args;
+#X floatatom 276 96 5 0 0 0 - - -;
+#X msg 276 116 octave \$1;
+#X obj 276 76 r \$0_octave;
+#X obj 218 205 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 3 0;
+#X restore 409 99 pd KEYBOARD_PARAMS;
+#N canvas 711 94 450 300 MULTI_SAMPLER_PARAMS 0;
+#X obj 179 41 loadbang;
+#X floatatom 166 188 5 0 0 0 - - -;
+#X msg 166 208 load \$1;
+#X text 227 202 use number box \; to load samples \; per voices (0-3)
+\;;
+#X obj 115 246 outlet;
+#X msg 131 101 read 0 ./audio/kick.wav;
+#X msg 141 121 read 1 ./audio/snare.wav;
+#X msg 151 141 read 2 ./audio/hh.wav;
+#X msg 161 161 read 3 ./audio/tom.wav;
+#X connect 0 0 5 0;
+#X connect 0 0 6 0;
+#X connect 0 0 7 0;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X restore 735 350 pd MULTI_SAMPLER_PARAMS;
+#X obj 696 42 declare -path r_cycle;
+#N canvas 1 78 486 150 MISC 0;
+#X text 32 25 This is needed to make the r_cycle objects accessible
+even before placing the r_cycle folder in a place part of the path
+search in Pd \;;
+#X obj 34 87 declare -path ../;
+#X restore 21 513 pd MISC;
+#X obj 648 392 DRUM_PADS 0 5 2 21 0 0;
+#X text 19 563 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 50 685 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 20 593 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 20 650 You may obtain a copy of the License at;
+#X text 20 715 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 20 771 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 2 1;
+#X connect 2 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 5 0 3 1;
+#X connect 6 0 2 2;
+#X connect 8 0 7 0;
+#X connect 8 0 7 1;
+#X connect 10 0 8 0;
+#X connect 11 0 12 0;
+#X connect 12 0 19 0;
+#X connect 21 0 2 0;
+#X connect 21 1 0 0;
+#X connect 22 0 21 0;
+#X connect 22 1 21 1;
+#X connect 24 0 4 1;
+#X connect 25 0 5 1;
+#X connect 26 0 22 0;
+#X connect 27 0 10 0;
+#X connect 30 0 10 0;
+#X connect 30 1 10 1;

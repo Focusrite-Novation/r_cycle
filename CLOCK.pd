@@ -1,0 +1,168 @@
+#N canvas 74 89 1206 609 10;
+#X obj 168 193 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 168 213 t f b;
+#X floatatom 593 161 5 0 0 2 bpm - -;
+#X obj 359 245 BPM2MS;
+#X obj 389 131 loadbang;
+#X msg 389 193 87;
+#X obj 168 271 metro 20.8333;
+#X floatatom 359 287 5 0 0 0 msec - -;
+#X obj 359 267 / 24;
+#X text 15 59 MIDI clock \; 6 ticks per 1/16th \; 24 ticks per 1/4th
+\; 96 ticks per bar \;;
+#X obj 175 11 inlet;
+#X obj 786 179 print -n;
+#X obj 786 23 r \$0_print_args;
+#X obj 175 55 s \$0_print_args;
+#X msg 786 47 CLOCK ARGS \, 1: unique ID \;;
+#X obj 195 245 spigot;
+#X obj 389 162 t b b;
+#X msg 416 193 1;
+#X msg 173 119 1;
+#X obj 173 142 t f f;
+#X obj 247 119 t b b;
+#X msg 247 141 1;
+#X msg 277 141 0;
+#X msg 213 119 0;
+#X obj 207 524 outlet;
+#X obj 168 493 s \$0_to_midi_out;
+#X obj 470 335 r \$0_to_midi_out;
+#X obj 470 387 spigot;
+#X obj 470 431 midiout;
+#X floatatom 518 360 5 0 0 0 - - -;
+#X msg 168 468 248;
+#X msg 386 359 250;
+#X msg 416 359 252;
+#X msg 446 359 251;
+#X obj 187 438 s \$1_trigger;
+#X obj 43 233 s \$1_play;
+#X obj 43 253 s \$1_stop;
+#X obj 43 273 s \$1_continue;
+#X obj 173 79 t b b b;
+#X obj 223 79 t b b b;
+#X obj 273 79 t b b b;
+#X obj 168 407 t b b b;
+#X obj 296 524 outlet;
+#X obj 296 407 r \$1_play;
+#X obj 316 427 r \$1_stop;
+#X obj 336 447 r \$1_continue;
+#X msg 296 479 play;
+#X msg 336 479 stop;
+#X msg 376 499 continue;
+#X obj 296 501 symbol;
+#X obj 376 473 t b b;
+#X obj 502 152 bng 25 250 50 0 empty empty P 8 13 0 12 -4034 -1 -1
+;
+#X obj 532 152 bng 25 250 50 0 empty empty S 8 13 0 12 -260097 -1 -1
+;
+#X obj 562 152 bng 25 250 50 0 empty empty C 8 13 0 12 -257985 -1 -1
+;
+#X msg 502 202 play;
+#X msg 532 202 stop;
+#X msg 562 202 continue;
+#X obj 651 240 min 1e+07;
+#X obj 651 262 max 1;
+#X obj 651 283 t f f;
+#X msg 678 307 set \$1;
+#X obj 514 56 s \$0_print_outlets;
+#X obj 803 73 r \$0_print_outlets;
+#X msg 803 97 CLOCK OUTLETS \, 1: ticks \, 2: symbol (play/stop/continue)
+;
+#X obj 175 33 route print_args play stop continue bpm midi print_outlets
+print_methods, f 76;
+#X obj 571 82 s \$0_print_methods;
+#X obj 819 125 r \$0_print_methods;
+#X msg 819 147 CLOCK METHODS \, play \, stop \, continue \, bpm \,
+midi \;;
+#X text 202 548 ticks sent to MIDI out have max priority \; then [send]
+then outlet \;;
+#X text 793 313 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 824 435 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 794 343 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 794 400 You may obtain a copy of the License at;
+#X text 794 465 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 794 521 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 1 15 0;
+#X connect 2 0 57 0;
+#X connect 3 0 8 0;
+#X connect 4 0 16 0;
+#X connect 5 0 2 0;
+#X connect 6 0 41 0;
+#X connect 7 0 6 1;
+#X connect 8 0 7 0;
+#X connect 10 0 64 0;
+#X connect 12 0 14 0;
+#X connect 14 0 11 0;
+#X connect 16 0 5 0;
+#X connect 16 1 17 0;
+#X connect 17 0 15 1;
+#X connect 18 0 19 0;
+#X connect 19 0 0 0;
+#X connect 19 1 15 1;
+#X connect 20 0 21 0;
+#X connect 20 1 22 0;
+#X connect 21 0 0 0;
+#X connect 22 0 15 1;
+#X connect 23 0 0 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
+#X connect 29 0 27 1;
+#X connect 30 0 25 0;
+#X connect 31 0 27 0;
+#X connect 32 0 27 0;
+#X connect 33 0 27 0;
+#X connect 38 0 18 0;
+#X connect 38 1 31 0;
+#X connect 38 2 35 0;
+#X connect 39 0 23 0;
+#X connect 39 1 32 0;
+#X connect 39 2 36 0;
+#X connect 40 0 20 0;
+#X connect 40 1 33 0;
+#X connect 40 2 37 0;
+#X connect 41 0 24 0;
+#X connect 41 1 34 0;
+#X connect 41 2 30 0;
+#X connect 43 0 46 0;
+#X connect 44 0 47 0;
+#X connect 45 0 50 0;
+#X connect 46 0 49 0;
+#X connect 47 0 49 0;
+#X connect 48 0 49 0;
+#X connect 49 0 42 0;
+#X connect 50 0 46 0;
+#X connect 50 1 48 0;
+#X connect 51 0 54 0;
+#X connect 52 0 55 0;
+#X connect 53 0 56 0;
+#X connect 54 0 64 0;
+#X connect 55 0 64 0;
+#X connect 56 0 64 0;
+#X connect 57 0 58 0;
+#X connect 58 0 59 0;
+#X connect 59 0 3 0;
+#X connect 59 1 60 0;
+#X connect 60 0 2 0;
+#X connect 62 0 63 0;
+#X connect 63 0 11 0;
+#X connect 64 0 13 0;
+#X connect 64 1 38 0;
+#X connect 64 2 39 0;
+#X connect 64 3 40 0;
+#X connect 64 4 2 0;
+#X connect 64 5 29 0;
+#X connect 64 6 61 0;
+#X connect 64 7 65 0;
+#X connect 66 0 67 0;
+#X connect 67 0 11 0;
+#X coords 0 -1 1 1 129 29 2 500 150;

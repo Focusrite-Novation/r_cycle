@@ -1,0 +1,95 @@
+#N canvas 354 68 926 531 10;
+#X obj 34 34 inlet;
+#X obj 34 185 unpack 0 0 0;
+#X obj 91 291 pack;
+#X obj 34 322 list store;
+#X msg 81 56 reset;
+#X text 310 30 values per pad/button \; \; 1 status (0 or !=0) \; 2
+color (0-127) \;;
+#X msg 80 140 const 0 \;;
+#X obj 80 161 s LAYOUT_\$1;
+#X obj 391 106 array define LAYOUT_\$1 200;
+#X obj 34 379 array set LAYOUT_\$1;
+#X obj 374 410 outlet;
+#X obj 374 349 array get LAYOUT_\$1;
+#X obj 374 277 * 2;
+#X obj 374 298 t f b;
+#X msg 429 321 2;
+#X obj 424 410 outlet;
+#X text 373 430 status;
+#X text 425 430 color;
+#X floatatom 172 50 5 0 0 0 - - -;
+#X obj 374 379 unpack;
+#X msg 172 70 get \$1;
+#X obj 89 349 * 2;
+#X obj 105 218 moses 0;
+#X obj 34 221 t b f f;
+#X obj 144 246 t f b;
+#X msg 238 177 0;
+#X obj 205 201 spigot;
+#X msg 181 288 1;
+#X obj 205 250 tabread LAYOUT_\$1;
+#X obj 205 225 * 2;
+#X msg 91 76 99 1 -1;
+#X text 278 198 if color<0 reuse same color \;;
+#X obj 205 131 s \$0_print_outlets;
+#X obj 35 105 route list reset get print_outlets print_methods;
+#X obj 262 154 s \$0_print_methods;
+#X obj 617 48 r \$0_print_outlets;
+#X obj 639 99 r \$0_print_methods;
+#X msg 617 69 SCENE OUTLETS \, 1: status \, 2: color \;;
+#X msg 639 120 SCENE METHODS \, list \, reset \, get \;;
+#X obj 617 151 print -n;
+#X text 570 245 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 601 367 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 571 275 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 571 332 You may obtain a copy of the License at;
+#X text 571 397 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 571 453 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 33 0;
+#X connect 1 0 23 0;
+#X connect 1 1 2 0;
+#X connect 1 2 22 0;
+#X connect 2 0 3 1;
+#X connect 3 0 9 0;
+#X connect 4 0 33 0;
+#X connect 6 0 7 0;
+#X connect 11 0 19 0;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X connect 13 1 14 0;
+#X connect 14 0 11 1;
+#X connect 18 0 20 0;
+#X connect 19 0 10 0;
+#X connect 19 1 15 0;
+#X connect 20 0 33 0;
+#X connect 21 0 9 1;
+#X connect 22 0 27 0;
+#X connect 22 1 24 0;
+#X connect 23 0 3 0;
+#X connect 23 1 21 0;
+#X connect 23 2 26 0;
+#X connect 24 0 2 1;
+#X connect 24 1 25 0;
+#X connect 25 0 26 1;
+#X connect 26 0 29 0;
+#X connect 27 0 26 1;
+#X connect 28 0 2 1;
+#X connect 29 0 28 0;
+#X connect 30 0 33 0;
+#X connect 33 0 1 0;
+#X connect 33 1 6 0;
+#X connect 33 2 12 0;
+#X connect 33 3 32 0;
+#X connect 33 4 34 0;
+#X connect 35 0 37 0;
+#X connect 36 0 38 0;
+#X connect 37 0 39 0;
+#X connect 38 0 39 0;

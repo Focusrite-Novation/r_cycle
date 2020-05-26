@@ -1,0 +1,64 @@
+#N canvas 135 78 1094 595 12;
+#X declare -path r_cycle;
+#X declare -path ../;
+#X obj 28 19 declare -path r_cycle;
+#X obj 28 92 LP_GUI -1;
+#X obj 28 45 DEVICE_SELECT;
+#X text 271 69 LP_GUI;
+#X text 389 52 HOW TO \; --- \; - make sure no other [LP_GUI] is active
+(ie in a different patch) \; - select the right MIDI ports \; - click
+on the device 'device' and pick your LP model \; - turn on LP_GUI \;
+- use LP to control the sliders and check the Pd objects \;;
+#N canvas 1 78 486 150 MISC 0;
+#X text 32 25 This is needed to make the r_cycle objects accessible
+even before placing the r_cycle folder in a place part of the path
+search in Pd \;;
+#X obj 34 87 declare -path ../;
+#X restore 27 487 pd MISC;
+#X floatatom 414 313 5 0 0 0 pad_id - -;
+#X floatatom 468 343 5 0 0 0 velocity - -;
+#X floatatom 522 373 5 0 0 0 aftertouch - -;
+#X floatatom 577 413 5 0 0 0 pitch - -;
+#X obj 577 372 unpack;
+#X floatatom 616 413 5 0 0 1 polytouch - -;
+#X text 410 251 Pads arranged in a grid \; the 5th arg == 0 \;;
+#X floatatom 754 313 5 0 0 0 pad_id - -;
+#X floatatom 808 343 5 0 0 0 velocity - -;
+#X floatatom 862 373 5 0 0 0 aftertouch - -;
+#X floatatom 917 413 5 0 0 0 pitch - -;
+#X obj 917 372 unpack;
+#X floatatom 956 413 5 0 0 1 polytouch - -;
+#X obj 414 288 DRUM_PADS 0 0 3 24 0 -1;
+#X text 750 251 Pads arranged horizontally \; the 5th arg != 0 \;;
+#X obj 754 288 DRUM_PADS 0 6 12 3 1 -1;
+#X text 924 287 <<< WHITE WIDGET;
+#X text 584 287 <<< GREEN WIDGET;
+#X text 401 493 When 5th arg == 0 \, the total number of pads is equal
+to \; 3rd argument squared (ie if 3 \, then 3x3=9 pads will be the
+output) \; if 5th arg != 0 \, the total number of pads is equal to
+the 3rd argument (ie if 3 \, then 3 pads will be the outcome) \;;
+#X text 16 615 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 47 737 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 17 645 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 17 702 You may obtain a copy of the License at;
+#X text 17 767 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 17 823 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 10 0 9 0;
+#X connect 10 1 11 0;
+#X connect 17 0 16 0;
+#X connect 17 1 18 0;
+#X connect 19 0 6 0;
+#X connect 19 1 7 0;
+#X connect 19 2 8 0;
+#X connect 19 3 10 0;
+#X connect 21 0 13 0;
+#X connect 21 1 14 0;
+#X connect 21 2 15 0;
+#X connect 21 3 17 0;

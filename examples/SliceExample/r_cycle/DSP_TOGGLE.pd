@@ -1,0 +1,21 @@
+#N canvas 1 78 838 342 10;
+#X obj 102 102 tgl 15 0 empty empty audio_off_on 17 7 0 10 -262144
+-1 -1 0 1;
+#X msg 102 144 \; pd dsp \$1 \;;
+#X obj 102 51 inlet;
+#X text 380 52 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 411 174 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 381 82 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 381 139 You may obtain a copy of the License at;
+#X text 381 204 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 381 260 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X coords 0 -1 1 1 95 20 2 100 100;

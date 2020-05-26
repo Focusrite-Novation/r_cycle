@@ -1,0 +1,85 @@
+#N canvas 182 169 1001 576 10;
+#X obj 151 292 pack;
+#X obj 319 291 list prepend 0;
+#X obj 319 312 list trim;
+#X msg 151 317 \$1 velocity \$2;
+#X obj 120 220 t f f;
+#X msg 120 241 \$1 bang;
+#X floatatom 319 188 5 0 0 0 loadfile - -;
+#X obj 319 223 t b f;
+#X obj 120 61 inlet;
+#X obj 172 61 inlet;
+#X obj 120 357 clone SIMPLE_PLAYER \$1;
+#X obj 120 408 outlet~;
+#X text 292 22 designed to work with [DRUM_PADS] \; this patch allows
+to load a 'n' \; number of [SIMPLE_PLAYER] objects \;;
+#X text 104 26 pad_id;
+#X text 166 26 velocity;
+#X text 364 167 load file in a \; specific instance \;;
+#X msg 319 250 load;
+#X obj 379 211 list split 1;
+#X obj 379 232 t b f;
+#X text 588 229 'read' uses the following format \; \; [read \$1 \$2(
+where \$1 is the voice nr \; and \$2 the name of the file to load \;
+;
+#X obj 428 266 list;
+#X obj 428 293 symbol;
+#X msg 428 320 read symbol \$1;
+#X obj 120 192 stripnote;
+#X obj 172 166 t f f;
+#X text 2 190 to avoid triggers \; on pad release \;;
+#X obj 294 105 s \$0_print_methods;
+#X obj 603 24 r \$0_print_methods;
+#X obj 603 140 print -n;
+#X obj 120 83 route load read float print_methods print_outlets;
+#X obj 353 129 s \$0_print_outlets;
+#X obj 619 81 r \$0_print_outlets;
+#X msg 619 102 MULTI_SAMPLER OUTLETS \, 1: audio out \;;
+#X msg 603 45 MULTI_SAMPLER METHODS \, load \, read (voice nr) (filename)
+\;;
+#X text 577 327 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 608 449 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 578 357 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 578 414 You may obtain a copy of the License at;
+#X text 578 479 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 578 535 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 10 0;
+#X connect 3 0 10 0;
+#X connect 4 0 5 0;
+#X connect 4 1 0 0;
+#X connect 5 0 10 0;
+#X connect 6 0 7 0;
+#X connect 7 0 16 0;
+#X connect 7 1 1 1;
+#X connect 8 0 29 0;
+#X connect 9 0 24 0;
+#X connect 10 0 11 0;
+#X connect 16 0 1 0;
+#X connect 17 0 18 0;
+#X connect 17 1 20 1;
+#X connect 18 0 20 0;
+#X connect 18 1 1 1;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 22 0 1 0;
+#X connect 23 0 4 0;
+#X connect 24 0 23 1;
+#X connect 24 1 0 1;
+#X connect 27 0 33 0;
+#X connect 29 0 6 0;
+#X connect 29 1 17 0;
+#X connect 29 2 23 0;
+#X connect 29 3 26 0;
+#X connect 29 4 30 0;
+#X connect 31 0 32 0;
+#X connect 32 0 28 0;
+#X connect 33 0 28 0;

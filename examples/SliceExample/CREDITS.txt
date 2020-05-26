@@ -1,0 +1,12 @@
+Credits:
+
+Example - Peter Kirn
+peter@cdm.link
+
+Audio approach inspired by Pd Tutorial, Johannes Kreidler
+http://pd-tutorial.com
+
+Incorporates objects from RjLib by Martin Roth, Christian Haudum, et al:
+https://github.com/rjdj/rjlib
+
+[can be licensed under the same terms as the rest of r_cycle, if desired]

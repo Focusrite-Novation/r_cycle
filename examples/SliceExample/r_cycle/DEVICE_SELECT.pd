@@ -1,0 +1,26 @@
+#N canvas 0 23 744 430 10;
+#X obj 102 103 bng 15 250 50 0 empty empty select_MIDI_device 17 7
+0 10 -260097 -1 -1;
+#X msg 102 175 midi-properties;
+#X obj 102 226 s pd;
+#X msg 112 195 audio-properties;
+#X obj 102 121 bng 15 250 50 0 empty empty select_AUDIO_device 17 7
+0 10 -257985 -1 -1;
+#X text 329 119 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 360 241 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 330 149 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 330 206 You may obtain a copy of the License at;
+#X text 330 271 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 330 327 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X coords 0 -1 1 1 135 39 2 100 100;

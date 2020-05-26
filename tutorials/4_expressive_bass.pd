@@ -1,0 +1,360 @@
+#N canvas 0 23 1280 755 12;
+#X declare -path r_cycle;
+#X declare -path ../;
+#X obj 11 45 DEVICE_SELECT;
+#X obj 180 45 DSP_TOGGLE;
+#X msg 17 119 status \$1;
+#X obj 17 95 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 110 148 device LP_Pro;
+#X msg 109 171 device LP_X;
+#X obj 17 234 LP_GUI 1;
+#X obj 359 352 MONO_MIDI;
+#X floatatom 359 395 5 0 0 0 - - -;
+#X obj 359 434 mtof;
+#X obj 359 551 phasor~;
+#X obj 359 757 *~;
+#X obj 362 826 dac~;
+#X floatatom 1126 336 5 0 0 0 - - -;
+#X msg 1126 361 octave \$1;
+#X obj 1126 307 + 2;
+#X obj 419 379 s \$0_velocity;
+#X floatatom 1311 508 5 0 0 0 - - -;
+#X obj 359 282 KEYBOARD 0 -12 1;
+#X obj 359 525 line~;
+#X msg 359 494 \$1 \$2;
+#X obj 359 467 pack 0 0;
+#X floatatom 412 443 5 0 0 0 - - -;
+#X obj 1297 310 * 100;
+#X obj 1126 506 * 18.142;
+#X floatatom 1126 533 5 0 0 0 - - -;
+#X obj 1126 558 mtof;
+#X obj 359 658 bob~;
+#X obj 945 684 RADIO 81 8 3 75 0 1;
+#X obj 1112 684 RADIO 71 8 3 65 0 1;
+#X floatatom 980 739 5 0 0 0 - - -;
+#X obj 980 714 * 100;
+#X floatatom 1147 735 5 0 0 0 - - -;
+#X floatatom 1310 735 5 0 0 0 - - -;
+#X obj 1310 711 * 0.14;
+#X obj 1147 709 / 10;
+#X obj 1126 384 s \$0_octave;
+#X text 509 9 Expressive Bass Synth Tutorial;
+#X obj 980 763 s \$0_del_time, f 17;
+#X obj 1147 759 s \$0_del_fb;
+#X obj 1310 759 s \$0_del_lvl;
+#X obj 1297 337 s \$0_gliss;
+#N canvas 146 72 855 647 Aftertouch 0;
+#X obj 183 194 unpack;
+#X obj 183 237 spigot;
+#X obj 133 237 spigot;
+#X obj 251 161 t b b;
+#X msg 251 186 0;
+#X msg 283 186 1;
+#X obj 345 162 t b b;
+#X msg 345 187 0;
+#X msg 377 187 1;
+#X obj 133 14 inlet;
+#X obj 183 14 inlet;
+#X floatatom 22 273 5 0 0 0 - - -;
+#X obj 23 504 / 127;
+#X obj 22 238 r \$0_velocity;
+#X floatatom 134 300 5 0 0 0 - - -;
+#X obj 134 326 >;
+#X obj 95 461 spigot;
+#X obj 134 410 sel 1;
+#X msg 134 432 1;
+#X obj 189 409 sel 0;
+#X msg 189 432 0;
+#X obj 250 77 inlet;
+#X obj 251 129 sel 0;
+#X obj 345 130 sel 1;
+#X text 308 77 <<< Output of the toggle determines which message will
+be blocked or passed by the 'spigot' objects.;
+#X text 75 273 <<< Velocity provides an initial amplitude value.;
+#X text 237 14 <<< The patch takes both channel pressure and poly aftertouch
+settings \, so the patch will work regardless of LP configuration.
+, f 71;
+#X text 176 326 <<< Channel pressure/poly aftertouch values are compared
+with the velocity value \, once the ch.pressure/p.touch message is
+greater than the velocity \, the ch.pressure/p.touch message will begin
+to control the amplitude and will continue to until a pad is released
+(velocity = 0)., f 92;
+#X obj 23 531 s \$0_amp;
+#X connect 0 0 1 0;
+#X connect 1 0 14 0;
+#X connect 2 0 14 0;
+#X connect 3 0 4 0;
+#X connect 3 1 5 0;
+#X connect 4 0 1 1;
+#X connect 5 0 2 1;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;
+#X connect 7 0 2 1;
+#X connect 8 0 1 1;
+#X connect 9 0 2 0;
+#X connect 10 0 0 0;
+#X connect 11 0 12 0;
+#X connect 11 0 15 1;
+#X connect 11 0 19 0;
+#X connect 12 0 28 0;
+#X connect 13 0 11 0;
+#X connect 14 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 12 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 1;
+#X connect 19 0 20 0;
+#X connect 20 0 16 1;
+#X connect 21 0 22 0;
+#X connect 21 0 23 0;
+#X connect 22 0 3 0;
+#X connect 23 0 6 0;
+#X restore 431 328 pd Aftertouch;
+#X obj 156 71 cnv 15 150 30 empty empty Turn_audio_on!! 20 12 0 14
+-257985 -66577 0;
+#X obj 1091 282 RADIO 19 4 3 36 1 1;
+#X obj 1262 280 RADIO 59 4 3 67 1 1;
+#X obj 1091 481 RADIO 41 8 3 4 0 1;
+#X obj 1276 481 RADIO 33 4 3 52 0 1;
+#X obj 1275 685 RADIO 61 8 3 16 0 1;
+#X obj 911 248 cnv 15 150 30 empty empty Radio_Mappings 20 12 0 14
+-260097 -66577 0;
+#X obj 1101 246 cnv 15 90 30 empty empty Octave 20 12 0 14 -4032 -66577
+0;
+#X obj 354 248 cnv 15 90 30 empty empty empty 20 12 0 14 -4032 -66577
+0;
+#X obj 359 255 r \$0_octave;
+#X obj 1278 243 cnv 15 75 30 empty empty Gliss 20 12 0 14 -4032 -66577
+0;
+#X obj 405 410 cnv 15 90 30 empty empty empty 20 12 0 14 -4032 -66577
+0;
+#X obj 412 417 r \$0_gliss;
+#X obj 1091 445 cnv 15 130 30 empty empty Filter_Freq. 20 12 0 14 -261234
+-66577 0;
+#X obj 365 577 cnv 15 120 30 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 1278 444 cnv 15 120 30 empty empty Filter_Res 20 12 0 14 -261234
+-66577 0;
+#X obj 375 618 cnv 15 120 30 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 951 649 cnv 15 110 30 empty empty Delay_Time 20 12 0 14 -4034
+-66577 0;
+#X obj 1121 649 cnv 15 100 30 empty empty Feedback 20 12 0 14 -4034
+-66577 0;
+#X obj 1281 649 cnv 15 120 30 empty empty Delay_Level 20 12 0 14 -4034
+-66577 0;
+#X obj 367 782 cnv 15 110 30 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#N canvas 455 107 684 505 Delay 0;
+#X obj 31 38 hip~ 500;
+#X obj 32 437 *~;
+#X obj 123 169 line~;
+#X obj 125 312 *~;
+#X obj 50 386 \$1 5;
+#X obj 50 411 line~;
+#X msg 144 265 \$1 5;
+#X obj 144 289 line~;
+#X msg 123 146 \$1 300;
+#X obj 31 8 inlet~;
+#X obj 32 466 outlet~;
+#X obj 111 110 cnv 15 110 30 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 123 115 r \$0_del_time;
+#X text 233 114 <<< Delay time value is sent from the main patch.;
+#X obj 129 230 cnv 15 110 30 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 144 235 r \$0_del_fb;
+#X text 102 37 <<< Incoming signal goes through a high pass filter
+before being written to the delay buffer.;
+#X text 251 234 <<< Feedback \, sent from the main patch controls how
+much of the signal will be sent back into the buffer.;
+#X obj 39 351 cnv 15 110 30 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 51 356 r \$0_del_lvl;
+#X text 156 355 <<< Controls the overall level of the delay effect.
+;
+#X obj 31 71 delwrite~ \$0_ebtdelay 700;
+#X obj 123 192 delread4~ \$0_ebtdelay 700;
+#X connect 0 0 21 0;
+#X connect 1 0 10 0;
+#X connect 2 0 22 0;
+#X connect 3 0 21 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 1;
+#X connect 6 0 7 0;
+#X connect 7 0 3 1;
+#X connect 8 0 2 0;
+#X connect 9 0 0 0;
+#X connect 12 0 8 0;
+#X connect 15 0 6 0;
+#X connect 19 0 4 0;
+#X connect 22 0 1 0;
+#X connect 22 0 3 0;
+#X restore 387 787 pd Delay;
+#X text 538 327 <<< Open for more information.;
+#X text 486 788 <<< Open for more information.;
+#X text 427 467 <<< 'pack' joins together the note and time values
+needed for 'line~' to create the glissando., f 49;
+#X text 399 659 <<< Squelch from pd's Bob Moog style filter.;
+#X text 522 380 <<< Velocity value is sent to 'pd Aftertouch', f 29
+;
+#X obj 519 281 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 541 281 <<< Channel Pressure (0) / Poly Aftertouch (1).;
+#X text 348 84 The 'KEYBOARD' acts as a typical keyboard \, the vertical
+'RADIO' widget to the right of the keyboard provides an octave value
+over a four octave range and the vertical 'RADIO' widget above control
+glissando/gliss (0 - 300ms)., f 136;
+#X text 348 126 The filter section includes a frequency control (pads
+41-48) and a resonance control (pads 33-36). The delay section features
+(from top to bottom) delay time \, feedback and level. This patch also
+uses the aftertouch messages from the LP to control the level of the
+osciallator. More information on this can be found in 'pd Aftertouch'
+below., f 136;
+#X text 348 46 Guide - This tutorial advances on the ideas and techniques
+covered in 'T_BASIC_MONO_SYNTH.pd'. The widgets are divided into three
+sections - keyboard = blue \, filter = pink/purple and delay = green.
+, f 136;
+#X text 915 284 Using the same approach to the 'RADIO' widget as 'T_BASIC_MONO_SYNTH.pd'.
+The index of each 'RADIO' widget is scaled to the appropriate range
+and mapped to other objects in the patch. A short ramp is used for
+signal-rate objects to create a smooth transition between values.,
+f 21;
+#X msg 109 194 device LPM_MK3;
+#N canvas 257 144 563 382 LP_select 0;
+#X obj 21 304 line~;
+#X msg 21 280 \$1 1;
+#X obj 21 75 r \$0_amp;
+#X obj 100 113 r \$0_velocity;
+#X obj 21 221 spigot;
+#X obj 100 221 spigot;
+#X obj 21 334 outlet~;
+#X obj 139 13 inlet;
+#X obj 60 195 == 0;
+#X obj 139 194 == 1;
+#X text 88 76 <<< Sent from 'pd Aftertouch';
+#X text 186 194 <<< Allows LPM users to use velocity to control the
+amplitude of the synth.;
+#X obj 37 135 loadbang;
+#X msg 37 161 0;
+#X obj 100 140 / 127;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 3 0 14 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 7 0 9 0;
+#X connect 7 0 8 0;
+#X connect 8 0 4 1;
+#X connect 9 0 5 1;
+#X connect 12 0 13 0;
+#X connect 13 0 8 0;
+#X connect 14 0 5 0;
+#X restore 377 729 pd LP_select;
+#X obj 377 697 tgl 25 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
+1;
+#X obj 404 698 cnv 15 200 25 empty empty LPM_users_click_here 20 12
+0 14 -257985 -66577 0;
+#X obj 1126 585 s \$0_to_bob_freq;
+#X obj 1311 536 s \$0_to_bob_res;
+#N canvas 299 154 163 129 to_bob_freq 0;
+#X obj 14 65 line~;
+#X msg 14 42 \$1 5;
+#X obj 14 17 r \$0_to_bob_freq;
+#X obj 14 88 outlet~;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X restore 371 583 pd to_bob_freq;
+#N canvas 0 23 163 139 to_bob_res 0;
+#X obj 11 60 line~;
+#X msg 11 35 \$1 1;
+#X obj 11 10 r \$0_to_bob_res;
+#X obj 11 87 outlet~;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X restore 384 624 pd to_bob_res;
+#X text 348 176 This patch also uses the aftertouch messages from the
+LP to control the level of the oscillator. More information on this
+can be found in 'pd Aftertouch' below. Note \, this will not work with
+the LPM as it does not feature Channel Pressure or Poly Aftertouch.
+LPM users \, click the yellow toggle labelled "LPM_users_click_here"
+to alter the patch for the LPM., f 136;
+#X obj 10 17 declare -path r_cycle;
+#X msg 110 128 device LP_Pro_MK3;
+#N canvas 1 78 486 150 MISC 0;
+#X text 32 25 This is needed to make the r_cycle objects accessible
+even before placing the r_cycle folder in a place part of the path
+search in Pd \;;
+#X obj 34 87 declare -path ../;
+#X restore 17 634 pd MISC;
+#X text 14 905 Copyright 2019-2020 Focusrite Audio Engineering Limited.
+;
+#X text 45 1027 http://www.apache.org/licenses/LICENSE-2.0;
+#X text 15 935 Licensed under the Apache License \, Version 2 (the
+"License") \; you may not use this file except in compliance with the
+License.;
+#X text 15 992 You may obtain a copy of the License at;
+#X text 15 1057 Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied.;
+#X text 15 1113 See the License for the specific language governing
+permissions and limitations under the License.;
+#X connect 2 0 6 0;
+#X connect 3 0 2 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 7 1 16 0;
+#X connect 8 0 9 0;
+#X connect 9 0 21 0;
+#X connect 10 0 27 0;
+#X connect 11 0 12 0;
+#X connect 11 0 12 1;
+#X connect 11 0 64 0;
+#X connect 13 0 14 0;
+#X connect 14 0 36 0;
+#X connect 15 0 13 0;
+#X connect 17 0 81 0;
+#X connect 18 0 7 0;
+#X connect 18 1 7 1;
+#X connect 18 2 42 0;
+#X connect 18 3 42 1;
+#X connect 19 0 10 0;
+#X connect 20 0 19 0;
+#X connect 21 0 20 0;
+#X connect 22 0 21 1;
+#X connect 23 0 41 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 26 0 80 0;
+#X connect 27 0 11 0;
+#X connect 28 1 31 0;
+#X connect 29 1 35 0;
+#X connect 30 0 38 0;
+#X connect 31 0 30 0;
+#X connect 32 0 39 0;
+#X connect 33 0 40 0;
+#X connect 34 0 33 0;
+#X connect 35 0 32 0;
+#X connect 44 1 15 0;
+#X connect 45 1 23 0;
+#X connect 46 1 24 0;
+#X connect 47 1 17 0;
+#X connect 48 1 34 0;
+#X connect 52 0 18 0;
+#X connect 55 0 22 0;
+#X connect 64 0 12 0;
+#X connect 64 0 12 1;
+#X connect 70 0 42 2;
+#X connect 76 0 6 0;
+#X connect 77 0 11 1;
+#X connect 78 0 77 0;
+#X connect 82 0 27 1;
+#X connect 83 0 27 2;
+#X connect 86 0 6 0;
